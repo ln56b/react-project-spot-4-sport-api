@@ -1,4 +1,4 @@
-import React, { components } from 'react';
+import React from 'react';
 import { Map, CircleMarker, TileLayer, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';

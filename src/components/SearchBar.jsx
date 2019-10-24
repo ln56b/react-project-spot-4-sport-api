@@ -21,13 +21,6 @@ class SearchBar extends React.Component {
     this.props.dataInput(loweredCoordinates);
   }
 
-  /* Laisse le texte affiché dans la search bar */
-  // componentDidMount() {
-  //   // eslint-disable-next-line no-undef
-  //   const coordinates = localStorage.getItem('coordinates');
-  //   this.setState({ coordinates })
-  // }
-
   render() {
     return (
       <div>
