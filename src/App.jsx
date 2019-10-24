@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
 import MapTest from './components/MapTest';
 import places from './components/Places';
@@ -21,7 +22,6 @@ class App extends React.Component {
   }
 
   isPlaces() {
-    // this.city = [i.coordinates[1], i.coordinates[0]];
     const finder = places.city.find(i => {
       return this.state.city === i.name;
     });
@@ -35,6 +35,7 @@ class App extends React.Component {
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
+        <NavBar />
         <SearchBar dataInput={this.handleGoClick} />
         <MapTest cityCenter={center} zoomCity={zoom} />
       </div>
