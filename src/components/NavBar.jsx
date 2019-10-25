@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import Burger from './Burger';
 
 function NavBar() {
   return (
@@ -14,11 +15,7 @@ function NavBar() {
         <span className="four">4</span>
         SPORT
       </h1>
-      <img
-        className="burger"
-        src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
-        alt="burger"
-      />
+      <Burger />
     </div>
   );
 }

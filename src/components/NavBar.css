@@ -12,8 +12,9 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row-reverse;
+  align-content: center;
 }
 
 h1 {
@@ -24,8 +25,7 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  .logo,
-  .burger {
+  .logo {
     height: 50px;
     width: 50px;
   }
