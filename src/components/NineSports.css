@@ -3,68 +3,29 @@
   flex-direction: column;
 }
 .homePage-Mobile-Sports-Display {
-  align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .homePage-Icons-Size {
-  width: 100px;
-  height: auto;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 24%;
+  margin: 15px;
+  background-color: #ffffff;
+  border: none;
+}
+.homePage-Icons {
+  max-width: 100%;
 }
 .homePage-AllSports-btn {
   align-self: flex-end;
   border-radius: 1rem;
   background-color: #c84c4b;
-  margin-right: 10%;
-}
-.HomePageGreyBackground {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000000;
-  opacity: 0.3;
-}
-.HomePageModal {
-  background: #ffffff;
-  opacity: 1;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 40%;
-  height: 30%;
-  max-width: 40%;
-  max-height: 30%;
-  margin: auto;
-  border-radius: 10px;
-}
-.HomePageHideModal {
-  display: none;
-}
-.HomePageShowModal {
-  display: inline-block;
-}
-@media screen and (max-width: 620px) {
-  .homePage-Icons-Size {
-    width: 80px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .homePage-Icons-Size {
-    width: 60px;
-    height: auto;
-    margin: 1.5em;
-  }
-}
-@media screen and (max-width: 405px) {
-  .homePage-Icons-Size {
-    margin: 1em;
-  }
-}
-@media screen and (max-width: 345px) {
-  .homePage-Icons-Size {
-    margin: 0.5em;
-  }
+  font-family: BenchNine;
+  font-size: 24px;
+  padding: 10px;
+  margin-right: 17px;
+  border: none;
 }

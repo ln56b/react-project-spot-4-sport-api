@@ -1,98 +1,52 @@
 import React from 'react';
 import './NineSports.css';
+import basketball from '../iconsHomePage/basketball.png';
+import football from '../iconsHomePage/football.png';
+import boxing from '../iconsHomePage/boxing-1.png';
+import hockey from '../iconsHomePage/hockey.png';
+import pingpong from '../iconsHomePage/ping-pong.png';
+import tennis from '../iconsHomePage/tennis.png';
+import running from '../iconsHomePage/running.png';
+import yoga from '../iconsHomePage/yoga.png';
+import rugby from '../iconsHomePage/rugby.png';
 
 class NineSports extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false
-    };
-    this.showModal = this.showModal.bind(this);
-  }
-
-  showModal() {
-    this.setState({ show: true });
-  }
-
   render() {
     return (
-      <div>
+      <div className="homePage-Mobile">
         <div className="homePage-Mobile-Sports">
           <div className="homePage-Mobile-Sports-Display">
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/football.png')}
-                alt="soccer's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={football} alt="soccer's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/basketball.png')}
-                alt="basketball's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={basketball} alt="basketball's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/boxing-1.png')}
-                alt="boxing's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={boxing} alt="boxing's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/hockey.png')}
-                alt="hockey's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={hockey} alt="hockey's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/ping-pong.png')}
-                alt="table tennis' icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={pingpong} alt="table tennis' icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/rugby.png')}
-                alt="rugby's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={rugby} alt="rugby's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/tennis.png')}
-                alt="tennis's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={tennis} alt="tennis's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/running.png')}
-                alt="running's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={running} alt="running's icon" className="homePage-Icons" />
             </button>
-            <button type="button" onClick={this.showModal}>
-              <img
-                src={require('../iconsHomePage/yoga.png')}
-                alt="yoga's icon"
-                className="homePage-Icons-Size"
-              />
+            <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
+              <img src={yoga} alt="yoga's icon" className="homePage-Icons" />
             </button>
           </div>
           <button type="button" className="homePage-AllSports-btn">
             All sports
           </button>
-        </div>
-        <div className={this.state.show ? 'HomePageShowModal' : 'HomePageHideModal'}>
-          <div className="HomePageGreyBackground">
-            <div className="HomePageModal">
-              <p>SearchBar</p>
-            </div>
-          </div>
         </div>
       </div>
     );
