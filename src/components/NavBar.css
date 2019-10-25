@@ -1,0 +1,38 @@
+.logo,
+.burger {
+  height: 80px;
+  width: 80px;
+}
+
+.four {
+  font-size: 50px;
+  color: #c84c4b;
+  font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+h1 {
+  font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+  font-size: 40px;
+  margin: 0%;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .logo,
+  .burger {
+    height: 50px;
+    width: 50px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0%;
+  }
+  .four {
+    font-size: 40px;
+  }
+}
