@@ -2,7 +2,7 @@ import React from 'react';
 import { Map, CircleMarker, TileLayer, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
-import data from './data';
+import data from './Data';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
