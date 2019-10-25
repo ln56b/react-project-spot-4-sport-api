@@ -9,6 +9,7 @@ import tennis from '../iconsHomePage/tennis.png';
 import running from '../iconsHomePage/running.png';
 import yoga from '../iconsHomePage/yoga.png';
 import rugby from '../iconsHomePage/rugby.png';
+import ModalTry from './ModalTry';
 
 class NineSports extends React.Component {
   render() {
@@ -48,6 +49,7 @@ class NineSports extends React.Component {
             All sports
           </button>
         </div>
+        <ModalTry />
       </div>
     );
   }
