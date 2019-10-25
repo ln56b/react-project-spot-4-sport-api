@@ -1,0 +1,27 @@
+h3 {
+  font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+}
+
+.map {
+  display: flex;
+  height: 480px;
+  width: 90%;
+  border-radius: 25px;
+  display: flex;
+  align-content: center;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .map {
+    display: flex;
+    height: 350px;
+    width: 90%;
+    border-radius: 25px;
+    display: flex;
+    align-content: center;
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+}

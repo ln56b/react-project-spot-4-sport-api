@@ -1,0 +1,11 @@
+.map {
+  display: flex;
+  height: 480px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
