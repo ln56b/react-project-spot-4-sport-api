@@ -1,5 +1,6 @@
 import React from 'react';
 import './SportsListAlphab.css';
+import './SportsByFirstChar.css';
 
 const sportsList = [
   {
@@ -31,31 +32,73 @@ const sportsList = [
     }
   },
   {
-    id: 4,
-    type: 44,
+    id: 5,
+    type: 55,
     attributes: {
-      name: 'Archery'
+      name: 'cycling'
     }
   },
   {
-    id: 4,
-    type: 44,
+    id: 6,
+    type: 66,
     attributes: {
-      name: 'Archery'
+      name: 'cross-country running'
     }
   },
   {
-    id: 4,
-    type: 44,
+    id: 7,
+    type: 77,
     attributes: {
-      name: 'Archery'
+      name: 'discus throw'
     }
   },
   {
-    id: 4,
-    type: 44,
+    id: 8,
+    type: 88,
     attributes: {
-      name: 'Archery'
+      name: 'Equestrianism'
+    }
+  },
+  {
+    id: 9,
+    type: 99,
+    attributes: {
+      name: 'Fencing'
+    }
+  },
+  {
+    id: 12,
+    type: 12,
+    attributes: {
+      name: 'Horse racing'
+    }
+  },
+  {
+    id: 13,
+    type: 13,
+    attributes: {
+      name: 'Judo'
+    }
+  },
+  {
+    id: 24,
+    type: 24,
+    attributes: {
+      name: 'Karate'
+    }
+  },
+  {
+    id: 25,
+    type: 25,
+    attributes: {
+      name: 'Marathon'
+    }
+  },
+  {
+    id: 26,
+    type: 26,
+    attributes: {
+      name: 'Sprint'
     }
   }
 ];

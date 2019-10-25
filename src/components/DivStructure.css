@@ -1,0 +1,15 @@
+h4 {
+  color: #c84c4b;
+  margin: 0;
+  padding: 0.5em;
+}
+
+hr {
+  border: 1px solid #c84c4b;
+  margin: 0 1em;
+}
+
+@media (min-width: 1260px) {
+  h4 {
+  }
+}

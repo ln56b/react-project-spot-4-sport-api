@@ -1,5 +1,6 @@
 import React from 'react';
 import SportsByFirstChar from './SportsByFirstChar';
+import './DivStructure.css';
 
 function DivStructure() {
   const ulArr = [];
@@ -9,6 +10,7 @@ function DivStructure() {
   return ulArr.map(letter => (
     <div>
       <h4>{letter}</h4>
+      <hr />
       <SportsByFirstChar letter={letter} />
     </div>
   ));
