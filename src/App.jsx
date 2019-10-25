@@ -1,46 +1,12 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import SearchBar from './components/SearchBar';
-import MapTest from './components/MapTest';
-import places from './components/Places';
+import MapPage from './components/MapPage';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // eslint-disable-next-line react/no-unused-state
-      city: ''
-    };
-
-    this.handleGoClick = this.handleGoClick.bind(this);
-    this.isPlaces = this.isPlaces.bind(this);
-  }
-
-  handleGoClick(city) {
-    // eslint-disable-next-line react/no-unused-state
-    this.setState({ city });
-  }
-
-  isPlaces() {
-    const finder = places.city.find(i => {
-      return this.state.city === i.name;
-    });
-    console.log(finder);
-    return finder;
-  }
-
-  render() {
-    const isFinder = this.isPlaces();
-    const center = isFinder ? isFinder.coordinates : [-0.09, 51.505];
-    const zoom = isFinder ? 12 : 3;
-    return (
-      <div>
-        <NavBar />
-        <SearchBar dataInput={this.handleGoClick} />
-        <MapTest cityCenter={center} zoomCity={zoom} />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <MapPage />
+    </div>
+  );
 }
 
 export default App;

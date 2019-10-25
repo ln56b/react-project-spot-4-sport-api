@@ -1,8 +1,8 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import SearchBar from './components/SearchBar';
-import MapTest from './components/MapTest';
-import './components/Places';
+import NavBar from './NavBar';
+import SearchBar from './SearchBar';
+import MapTest from './MapTest';
+import places from './Places';
 
 class MapPage extends React.Component {
   constructor(props) {
