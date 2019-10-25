@@ -9,7 +9,7 @@ class MapTest extends React.Component {
   render() {
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }}>Do sport where you want</h3>
+        <h3 style={{ textAlign: 'center' }}></h3>
         <Map className="map" zoom={this.props.zoomCity} center={this.props.cityCenter}>
           <TileLayer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {data.city.map(i => {
