@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import SportsByFirstChar from './SportsByFirstChar';
 import DivStructure from './DivStructure';
 
 function SportsPage() {
