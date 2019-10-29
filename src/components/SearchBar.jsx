@@ -18,7 +18,8 @@ class SearchBar extends React.Component {
     event.preventDefault();
     const { coordinates } = this.state;
     const loweredCoordinates = coordinates.toLowerCase();
-    this.props.dataInput(loweredCoordinates);
+    const uriTranslatedCoordinates = encodeURIComponent(loweredCoordinates).replace(/%20/g, '+');
+    this.props.dataInput(uriTranslatedCoordinates);
   }
 
   render() {
