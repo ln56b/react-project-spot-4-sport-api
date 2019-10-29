@@ -28,7 +28,6 @@ class SearchBar extends React.Component {
           <input
             type="search"
             placeholder="Search a Spot"
-            // eslint-disable-next-line react/destructuring-assignment
             value={this.state.coordinates}
             onChange={this.handleSearch}
           />

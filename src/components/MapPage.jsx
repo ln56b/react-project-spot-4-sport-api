@@ -8,7 +8,6 @@ class MapPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // eslint-disable-next-line react/no-unused-state
       city: ''
     };
 
@@ -17,7 +16,6 @@ class MapPage extends React.Component {
   }
 
   handleGoClick(city) {
-    // eslint-disable-next-line react/no-unused-state
     this.setState({ city });
   }
 
@@ -25,7 +23,6 @@ class MapPage extends React.Component {
     const finder = places.city.find(i => {
       return this.state.city === i.name;
     });
-    console.log(finder);
     return finder;
   }
 
