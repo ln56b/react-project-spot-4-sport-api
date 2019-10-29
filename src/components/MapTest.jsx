@@ -24,7 +24,7 @@ class MapTest extends React.Component {
                 }}
               >
                 <Tooltip direction="right" offset={[-8, -2]} opacity={1}>
-                  <span>{`${i.name}: ${i.sport}`}</span>
+                  <span>{`Name: ${i.name}, Sport: ${i.sport}`}</span>
                 </Tooltip>
               </CircleMarker>
             );
