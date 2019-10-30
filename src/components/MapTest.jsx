@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import data from './Data';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
   render() {
     return (
