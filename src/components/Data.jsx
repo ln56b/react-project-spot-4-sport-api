@@ -1,8 +1,8 @@
 const data = {
   city: [
-    { name: 'McConnell Arena', coordinates: [-73.5826985, 45.5119864], sport: 'musculation' },
-    { name: 'Atrium Le 1000', coordinates: [-73.56597039999997, 45.4980426], sport: 'musculation' },
-    { name: 'Lac de la Ganguise', coordinates: [1.7993269, 43.325711], sport: 'musculation' },
+    { name: 'McConnell Arena', coordinates: [-73.5826985, 45.5119864], sport: 'hockey' },
+    { name: 'Atrium Le 1000', coordinates: [-73.56597039999997, 45.4980426], sport: 'hockey' },
+    { name: 'Lac de la Ganguise', coordinates: [1.7993269, 43.325711], sport: 'sports nautique' },
     {
       name: 'BASIC FIT Toulouse, Route Espagne',
       coordinates: [1.424412, 43.577605],
