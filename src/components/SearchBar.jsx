@@ -6,12 +6,8 @@ class SearchBar extends React.Component {
     this.state = {
       coordinates: ''
     };
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleSearch(event) {
-    this.setState({ coordinates: event.target.value });
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
@@ -29,8 +25,8 @@ class SearchBar extends React.Component {
           <input
             type="search"
             placeholder="Search a Spot"
-            value={this.state.coordinates}
-            onChange={this.handleSearch}
+            value={this.props.city}
+            onChange={this.props.handleSearch}
           />
           <button type="submit">Search</button>
         </form>
