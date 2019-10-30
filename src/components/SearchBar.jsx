@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, Form, Input } from 'reactstrap';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -24,16 +26,18 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <Form onSubmit={this.handleSubmit}>
+          <Input
             type="search"
             placeholder="Search a Spot"
             // eslint-disable-next-line react/destructuring-assignment
             value={this.state.coordinates}
             onChange={this.handleSearch}
           />
-          <button type="submit">Search</button>
-        </form>
+          <Button outline color="danger" type="submit">
+            Search
+          </Button>
+        </Form>
       </div>
     );
   }
