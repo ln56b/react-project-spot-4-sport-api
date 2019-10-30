@@ -10,9 +10,7 @@ class MapPage extends React.Component {
     super(props);
     this.state = {
       city: '',
-      pretty: 1,
-      api: '',
-      language: 'fr'
+      api: ''
     };
 
     this.handleGoClick = this.handleGoClick.bind(this);
@@ -21,22 +19,15 @@ class MapPage extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
-  handleGoClick() {
-    this.getLatLon();
-  }
-
-  handleSearch(event) {
-    this.setState({ city: event.target.value });
-  }
-
   getLatLon() {
+    const { city } = this.state;
     axios
       .get('https://api.opencagedata.com/geocode/v1/json', {
         params: {
-          q: this.state.city,
+          q: city,
           key: ApiKey,
-          pretty: this.state.pretty,
-          language: this.state.language
+          pretty: 1,
+          language: 'fr'
         }
       })
       .then(response => response.data.results)
@@ -47,25 +38,33 @@ class MapPage extends React.Component {
       });
   }
 
+  handleSearch(event) {
+    this.setState({ city: event.target.value });
+  }
+
+  handleGoClick() {
+    this.getLatLon();
+  }
+
   isPlaces() {
-    const finder = this.state.api.find(i => {
-      return this.state.city === i.components.city;
+    const { api } = this.state;
+    const { city } = this.state;
+    const finder = api.find(i => {
+      return city === i.components.city;
     });
     return finder;
   }
 
   render() {
-    const isFinder = this.state.api && this.isPlaces();
+    const { api } = this.state;
+    const { city } = this.state;
+    const isFinder = api && this.isPlaces();
     const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
         <NavBar />
-        <SearchBar
-          dataInput={this.handleGoClick}
-          city={this.state.city}
-          handleSearch={this.handleSearch}
-        />
+        <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
         <MapTest cityCenter={center} zoomCity={zoom} />
       </div>
     );

@@ -15,21 +15,19 @@ class SearchBar extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { coordinates } = this.state;
+    const { dataInput } = this.props;
     const loweredCoordinates = coordinates.toLowerCase();
     const uriTranslatedCoordinates = encodeURIComponent(loweredCoordinates).replace(/%20/g, '+');
-    this.props.dataInput(uriTranslatedCoordinates);
+    dataInput(uriTranslatedCoordinates);
   }
 
   render() {
+    const { city } = this.props;
+    const { handleSearch } = this.props;
     return (
       <div>
         <Form onSubmit={this.handleSubmit}>
-          <Input
-            type="search"
-            placeholder="Search a Spot"
-            value={this.props.city}
-            onChange={this.props.handleSearch}
-          />
+          <Input type="search" placeholder="Search a Spot" value={city} onChange={handleSearch} />
           <Button outline color="danger" type="submit">
             Search
           </Button>
