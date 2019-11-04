@@ -50,7 +50,15 @@ class MapPage extends React.Component {
     const { api } = this.state;
     const { city } = this.state;
     const finder = api.find(i => {
-      return city === i.components.city;
+      if (city === i.components.city) {
+        return city === i.components.city;
+      }
+      if (city === i.components.country) {
+        return city === i.components.country;
+      }
+      if (city === i.components.postcode) {
+        return city === i.components.postcode;
+      }
     });
     return finder;
   }
