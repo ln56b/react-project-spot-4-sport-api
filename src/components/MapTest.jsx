@@ -20,6 +20,12 @@ class MapTest extends React.Component {
     this.state = {
       api: ''
     };
+
+    this.getSportPlaces = this.getSportPlaces.bind(this);
+  }
+
+  componentDidMount() {
+    this.getSportPlaces();
   }
 
   getSportPlaces() {
