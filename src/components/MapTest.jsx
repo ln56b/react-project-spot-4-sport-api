@@ -1,9 +1,19 @@
 import React from 'react';
+import L from 'leaflet';
 import { Map, CircleMarker, TileLayer, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
+import axios from 'axios';
 import data from './Data';
 
+let myIcon = L.icon({
+  iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
+  iconSize: [25, 41],
+  iconAnchor: [12.5, 41],
+  popupAnchor: [0, -41]
+});
+
+// eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
   render() {
     return (
