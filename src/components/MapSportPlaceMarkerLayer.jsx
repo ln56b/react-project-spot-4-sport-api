@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import L from 'leaflet';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Marker, Popup } from 'react-leaflet';
 
 let myIcon = L.icon({
   iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
@@ -10,8 +10,8 @@ let myIcon = L.icon({
 });
 
 function MapSportPlaceMakerLayer(props) {
-  const { api } = props;
-  const sportPlacePosition = api
+  const { dataMarkers } = props;
+  const sportPlacePosition = dataMarkers
     .filter(sportPlace => sportPlace.geometry.type === 'Point')
     .map(markers => {
       const coords = markers.geometry.coordinates.reverse();

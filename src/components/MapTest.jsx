@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, CircleMarker, TileLayer, Tooltip } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
@@ -9,7 +9,7 @@ class MapTest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      api: ''
+      dataMarkers: ''
     };
 
     this.getSportPlaces = this.getSportPlaces.bind(this);
@@ -31,7 +31,7 @@ class MapTest extends React.Component {
       .then(response => response.data.data.features)
       .then(data => {
         this.setState({
-          api: data
+          dataMarkers: data
         });
       });
   }
@@ -42,7 +42,9 @@ class MapTest extends React.Component {
         <h3 style={{ textAlign: 'center' }} />
         <Map className="map" zoom={this.props.zoomCity} center={this.props.cityCenter}>
           <TileLayer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          {this.state.api && <MapSportPlaceMarkerLayer api={this.state.api} />}
+          {this.state.dataMarkers && (
+            <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
+          )}
         </Map>
       </div>
     );
