@@ -13,7 +13,6 @@ let myIcon = L.icon({
   popupAnchor: [0, -41]
 });
 
-// eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
   constructor(props) {
     super(props);
