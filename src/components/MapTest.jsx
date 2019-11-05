@@ -15,6 +15,30 @@ let myIcon = L.icon({
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      api: ''
+    };
+  }
+
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: '-73.582,45.511',
+          radius: 99,
+          sports: 175
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          api: data
+        });
+      });
+  }
+
   render() {
     return (
       <div>
