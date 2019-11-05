@@ -9,7 +9,7 @@ let myIcon = L.icon({
   popupAnchor: [0, -41]
 });
 
-function SportPlaceMakerLayer(props) {
+function MapSportPlaceMakerLayer(props) {
   const { api } = props;
   const sportPlacePosition = api
     .filter(sportPlace => sportPlace.geometry.type === 'Point')
@@ -24,4 +24,4 @@ function SportPlaceMakerLayer(props) {
   return <Fragment>{sportPlacePosition}</Fragment>;
 }
 
-export default SportPlaceMakerLayer;
+export default MapSportPlaceMakerLayer;
