@@ -19,8 +19,9 @@ class SportsProvider extends React.Component {
   }
 
   getSport() {
+    const url = 'https://sports.api.decathlon.com/sports';
     axios
-      .get('https://sports.api.decathlon.com/sports')
+      .get(url)
       .then(response => response.data.data)
       .then(data => {
         return data.map(sport => {
