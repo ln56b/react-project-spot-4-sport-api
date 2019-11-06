@@ -31,6 +31,18 @@ class SportsProvider extends React.Component {
           };
         });
       })
+      .then(sortingMySportArray => {
+        function compare(a, b) {
+          if (a.sportName < b.sportName) {
+            return -1;
+          }
+          if (a.sportName > b.sportName) {
+            return 1;
+          }
+          return 0;
+        }
+        return sortingMySportArray.sort(compare);
+      })
       .then(formattedSportList => {
         this.setState({
           sports: formattedSportList
