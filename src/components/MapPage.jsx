@@ -10,7 +10,7 @@ class MapPage extends React.Component {
     super(props);
     this.state = {
       city: '',
-      api: ''
+      dataSearched: ''
     };
 
     this.handleGoClick = this.handleGoClick.bind(this);
@@ -33,7 +33,7 @@ class MapPage extends React.Component {
       .then(response => response.data.results)
       .then(data => {
         this.setState({
-          api: data
+          dataSearched: data
         });
       });
   }
@@ -47,9 +47,9 @@ class MapPage extends React.Component {
   }
 
   isPlaces() {
-    const { api } = this.state;
+    const { dataSearched } = this.state;
     const { city } = this.state;
-    const finder = api.find(i => {
+    const finder = dataSearched.find(i => {
       if (city === i.components.city) {
         return city === i.components.city;
       }
@@ -64,9 +64,9 @@ class MapPage extends React.Component {
   }
 
   render() {
-    const { api } = this.state;
+    const { dataSearched } = this.state;
     const { city } = this.state;
-    const isFinder = api && this.isPlaces();
+    const isFinder = dataSearched && this.isPlaces();
     const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
     const zoom = isFinder ? 12 : 3;
     return (
