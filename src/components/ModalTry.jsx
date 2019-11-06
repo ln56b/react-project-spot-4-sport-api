@@ -1,38 +1,41 @@
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
+// import Modal from 'react-bootstrap/Modal';
+import ReactModal from 'react-modal';
+import './ModalTry.css';
 
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Modal heading</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <button onClick={props.onHide}>Close</button>
-      </Modal.Footer>
-    </Modal>
-  );
+class ExampleApp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+  render() {
+    const { showModal } = this.state;
+    return (
+      <div>
+        <button type="button" onClick={this.handleOpenModal}>
+          Trigger Modal
+        </button>
+        <ReactModal isOpen={showModal} contentLabel="Minimal Modal Example">
+          <button type="button" onClick={this.handleCloseModal}>
+            Close Modal
+          </button>
+        </ReactModal>
+      </div>
+    );
+  }
 }
 
-function ModalTry() {
-  const [modalShow, setModalShow] = React.useState(false);
-
-  return (
-    <buttonToolbar>
-      <button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </button>
-
-      <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
-    </buttonToolbar>
-  );
-}
-
-export default ModalTry;
+export default ExampleApp;

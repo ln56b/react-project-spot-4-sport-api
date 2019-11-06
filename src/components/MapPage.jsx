@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 import MapTest from './MapTest';
 import places from './Places';
@@ -35,7 +34,6 @@ class MapPage extends React.Component {
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
-        <NavBar />
         <SearchBar dataInput={this.handleGoClick} />
         <MapTest cityCenter={center} zoomCity={zoom} />
       </div>

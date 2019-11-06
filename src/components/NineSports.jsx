@@ -16,6 +16,7 @@ class NineSports extends React.Component {
     return (
       <div className="homePage-Mobile">
         <div className="homePage-Mobile-Sports">
+          <ModalTry />
           <div className="homePage-Mobile-Sports-Display">
             <button type="button" onClick={this.showModal} className="homePage-Icons-Size">
               <img src={football} alt="soccer's icon" className="homePage-Icons" />
@@ -49,7 +50,6 @@ class NineSports extends React.Component {
             All sports
           </button>
         </div>
-        <ModalTry />
       </div>
     );
   }
