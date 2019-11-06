@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SportsListFormatted from './SportsListFormatted';
+import './SportsProvider.css';
 
 class SportsProvider extends React.Component {
   constructor(props) {
@@ -29,9 +30,6 @@ class SportsProvider extends React.Component {
             sportFirstLetter: sport.attributes.name[0]
           };
         });
-        this.sportName.sort((a, b) => {
-          return a - b;
-        });
       })
       .then(formattedSportList => {
         this.setState({
@@ -52,11 +50,11 @@ class SportsProvider extends React.Component {
       return carry;
     };
     const allMySportsInfos = sports.reduce(reducer, {});
-    console.log(allMySportsInfos);
     const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
     const etBienOui = allMySportsInfosAlphabet.sort().map(letter => (
       <div>
         <h4>{letter}</h4>
+        <hr className="hr" />
         <SportsListFormatted sports={allMySportsInfos[letter]} />
       </div>
     ));

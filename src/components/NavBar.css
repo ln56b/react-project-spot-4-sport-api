@@ -12,19 +12,20 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row-reverse;
+  align-content: center;
 }
 
 h1 {
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
   font-size: 40px;
   margin: 0%;
+  font-style: bold;
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  .logo,
-  .burger {
+  .logo {
     height: 50px;
     width: 50px;
   }

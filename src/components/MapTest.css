@@ -2,6 +2,11 @@ h3 {
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
 }
 
+div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+  position: relative;
+  z-index: 2;
+}
+
 .map {
   display: flex;
   height: 480px;
