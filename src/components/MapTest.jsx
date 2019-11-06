@@ -3,7 +3,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import L from 'leaflet';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
