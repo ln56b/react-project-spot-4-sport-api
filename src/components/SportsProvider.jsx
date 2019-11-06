@@ -63,14 +63,14 @@ class SportsProvider extends React.Component {
     };
     const allMySportsInfos = sports.reduce(reducer, {});
     const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
-    const etBienOui = allMySportsInfosAlphabet.sort().map(letter => (
+    const mySportsListSorted = allMySportsInfosAlphabet.sort().map(letter => (
       <div>
         <h4>{letter}</h4>
         <hr className="hr" />
         <SportsListFormatted sports={allMySportsInfos[letter]} />
       </div>
     ));
-    return etBienOui;
+    return mySportsListSorted;
   }
 
   render() {
