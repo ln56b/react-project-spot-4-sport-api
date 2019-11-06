@@ -29,6 +29,9 @@ class SportsProvider extends React.Component {
             sportFirstLetter: sport.attributes.name[0]
           };
         });
+        this.sportName.sort((a, b) => {
+          return a - b;
+        });
       })
       .then(formattedSportList => {
         this.setState({
@@ -63,9 +66,6 @@ class SportsProvider extends React.Component {
   render() {
     return (
       <div>
-        {/* <button type="button" onClick={this.sportsSorted}>
-          plop
-        </button> */}
         <this.sportsSorted />
       </div>
     );

@@ -1,11 +1,11 @@
 import React from 'react';
 import SportsPage from './components/SportsPage';
-import MapPage from './components/MapPage';
+// import MapPage from './components/MapPage';
 
 function App() {
   return (
     <div>
-      <MapPage />
+      {/* <MapPage /> */}
       <SportsPage />
     </div>
   );
