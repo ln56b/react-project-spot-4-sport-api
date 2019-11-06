@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import SportsListFormatted from './SportsListFormatted';
+import './SportsProvider.css';
 
 class SportsProvider extends React.Component {
   constructor(props) {
@@ -30,6 +31,18 @@ class SportsProvider extends React.Component {
           };
         });
       })
+      .then(sortingMySportArray => {
+        function compare(a, b) {
+          if (a.sportName < b.sportName) {
+            return -1;
+          }
+          if (a.sportName > b.sportName) {
+            return 1;
+          }
+          return 0;
+        }
+        return sortingMySportArray.sort(compare);
+      })
       .then(formattedSportList => {
         this.setState({
           sports: formattedSportList
@@ -39,7 +52,7 @@ class SportsProvider extends React.Component {
 
   sportsSorted() {
     const { sports } = this.state;
-    console.log(sports);
+    const filterOutNumber = /[A-Z]/;
     const reducer = (carry, c) => {
       const key = c.sportFirstLetter;
       if (!carry[key]) {
@@ -51,7 +64,10 @@ class SportsProvider extends React.Component {
     };
     const allMySportsInfos = sports.reduce(reducer, {});
     const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
-    const mySportsListSorted = allMySportsInfosAlphabet.sort().map(letter => (
+    const filteredAlphabet = allMySportsInfosAlphabet.filter(letter =>
+      letter.match(filterOutNumber)
+    );
+    const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <div>
         <h4>{letter}</h4>
         <SportsListFormatted sports={allMySportsInfos[letter].sort()} />

@@ -49,7 +49,15 @@ class MapPage extends React.Component {
     const { dataSearched } = this.state;
     const { city } = this.state;
     const finder = dataSearched.find(i => {
-      return city === i.components.city;
+      if (city === i.components.city) {
+        return city === i.components.city;
+      }
+      if (city === i.components.country) {
+        return city === i.components.country;
+      }
+      if (city === i.components.postcode) {
+        return city === i.components.postcode;
+      }
     });
     return finder;
   }
@@ -62,7 +70,6 @@ class MapPage extends React.Component {
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
-        <NavBar />
         <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
         <MapTest cityCenter={center} zoomCity={zoom} />
       </div>
