@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
 import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
+import MapCheckbox from './MapCheckbox';
 
 class MapTest extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class MapTest extends React.Component {
             <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
         </Map>
+        <MapCheckbox />
       </div>
     );
   }
