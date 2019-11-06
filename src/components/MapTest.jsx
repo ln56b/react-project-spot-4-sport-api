@@ -1,34 +1,50 @@
 import React from 'react';
-import { Map, CircleMarker, TileLayer, Tooltip } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
-import data from './data';
+import axios from 'axios';
+import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class MapTest extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataMarkers: ''
+    };
+
+    this.getSportPlaces = this.getSportPlaces.bind(this);
+  }
+
+  componentDidMount() {
+    this.getSportPlaces();
+  }
+
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: '-73.582,45.511',
+          radius: 999,
+          sports: 175
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          dataMarkers: data
+        });
+      });
+  }
+
   render() {
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }}>Do sport where you want</h3>
+        <h3 style={{ textAlign: 'center' }} />
         <Map className="map" zoom={this.props.zoomCity} center={this.props.cityCenter}>
           <TileLayer url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          {data.city.map(i => {
-            return (
-              <CircleMarker
-                center={[i.coordinates[1], i.coordinates[0]]}
-                icon={{
-                  iconUrl:
-                    'https://www.shutterstock.com/image-vector/simple-red-map-pin-shadow-concept-553653676',
-                  iconSize: [38, 95],
-                  iconAnchor: [i.coordinates[1], i.coordinates[0]]
-                }}
-              >
-                <Tooltip direction="right" offset={[-8, -2]} opacity={1}>
-                  <span>{`${i.name}: ${i.sport}`}</span>
-                </Tooltip>
-              </CircleMarker>
-            );
-          })}
+          {this.state.dataMarkers && (
+            <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
+          )}
         </Map>
       </div>
     );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, Form, Input } from 'reactstrap';
+import './SearchBar.css';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -6,34 +8,30 @@ class SearchBar extends React.Component {
     this.state = {
       coordinates: ''
     };
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleSearch(event) {
-    this.setState({ coordinates: event.target.value });
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
     const { coordinates } = this.state;
+    const { dataInput } = this.props;
     const loweredCoordinates = coordinates.toLowerCase();
-    this.props.dataInput(loweredCoordinates);
+    const uriTranslatedCoordinates = encodeURIComponent(loweredCoordinates).replace(/%20/g, '+');
+    dataInput(uriTranslatedCoordinates);
   }
 
   render() {
+    const { city } = this.props;
+    const { handleSearch } = this.props;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="search"
-            placeholder="Search a Spot"
-            // eslint-disable-next-line react/destructuring-assignment
-            value={this.state.coordinates}
-            onChange={this.handleSearch}
-          />
-          <button type="submit">Search</button>
-        </form>
+        <Form onSubmit={this.handleSubmit}>
+          <Input type="search" placeholder="Search a Spot" value={city} onChange={handleSearch} />
+          <Button outline color="danger" type="submit">
+            Search
+          </Button>
+        </Form>
       </div>
     );
   }
