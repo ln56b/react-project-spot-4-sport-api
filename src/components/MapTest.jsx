@@ -44,6 +44,7 @@ class MapTest extends React.Component {
       });
     });
   }
+
   getSportPlaces() {
     axios
       .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
@@ -64,12 +65,12 @@ class MapTest extends React.Component {
   render() {
     const position = [this.state.location.lat, this.state.location.lng];
     const isUserLocation = this.state.haveUsersLocation;
-    const voilaZoom = isUserLocation ? this.state.zoom : this.props.zoomCity;
-    const voilaCenter = isUserLocation ? position : this.props.cityCenter;
+    const finalZoom = isUserLocation ? this.state.zoom : this.props.zoomCity;
+    const finalCenter = isUserLocation ? position : this.props.cityCenter;
     return (
       <div>
         <h3 style={{ textAlign: 'center' }} />
-        <Map className="map" zoom={voilaZoom} center={voilaCenter}>
+        <Map className="map" zoom={finalZoom} center={finalCenter}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
