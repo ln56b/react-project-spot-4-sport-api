@@ -3,10 +3,11 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import L from 'leaflet';
-import { Map, CircleMarker, TileLayer, Tooltip, Marker, Popup } from 'react-leaflet';
-//import { Card, CardImg, CardText, CardBody, CardLink, CardTitle, CardSubtitle } from 'reactstrap';
+import { Map, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
-import data from './Data';
+import axios from 'axios';
+import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
 
 const myIcon = L.icon({
   iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
@@ -16,16 +17,22 @@ const myIcon = L.icon({
 });
 
 class MapTest extends React.Component {
-  state = {
-    location: {
-      lat: 51.505,
-      lng: -0.09
-    },
-    haveUsersLocation: false,
-    zoom: 2
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataMarkers: '',
+      location: {
+        lat: 51.505,
+        lng: -0.09
+      },
+      haveUsersLocation: false,
+      zoom: 2
+    };
+    this.getSportPlaces = this.getSportPlaces.bind(this);
+  }
 
   componentDidMount() {
+    this.getSportPlaces();
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
         location: {
@@ -36,6 +43,22 @@ class MapTest extends React.Component {
         zoom: 13
       });
     });
+  }
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: '-73.582,45.511',
+          radius: 999,
+          sports: 175
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          dataMarkers: data
+        });
+      });
   }
 
   render() {
@@ -57,6 +80,9 @@ class MapTest extends React.Component {
             </Marker>
           ) : (
             ''
+          )}
+          {this.state.dataMarkers && (
+            <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
         </Map>
       </div>
