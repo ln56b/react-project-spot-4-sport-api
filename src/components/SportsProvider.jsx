@@ -9,13 +9,12 @@ class SportsProvider extends React.Component {
       sports: []
     };
     this.getSport = this.getSport.bind(this);
-    this.getLetterArray = this.getLetterArray.bind(this);
-    this.sportsSported = this.sportsSported.bind(this);
+    this.sportsSorted = this.sportsSorted.bind(this);
   }
 
   componentDidMount() {
     this.getSport();
-    this.getLetterArray();
+    this.sportsSorted();
   }
 
   getSport() {
@@ -38,37 +37,36 @@ class SportsProvider extends React.Component {
       });
   }
 
-  getLetterArray() {
-    const letterArr = [];
-    for (let i = 0; i < 26; i += 1) {
-      letterArr.push(String.fromCharCode(65 + i));
-    }
-    return letterArr;
-  }
-
-  sportsSported() {
-    let killMe = [];
-    for (let i = 0; i < 26; i += 1) {
-      killMe.push({ letter: this.getLetterArray()[i] });
-      for (let j = 0; j < this.state.sports.length; j += 1) {
-        if (this.getLetterArray()[i] === this.state.sports[j].sportFirstLetter) {
-          killMe.push({
-            name: this.state.sports[j].sportName,
-            id: this.state.sports[j].sportId,
-            firstLetter: this.state.sports[j].sportFirstLetter
-          });
-        }
+  sportsSorted() {
+    const { sports } = this.state;
+    const reducer = (carry, c) => {
+      const key = c.sportFirstLetter;
+      if (!carry[key]) {
+        carry[key] = [];
+        return carry;
       }
-    }
-    return killMe;
+      carry[key].push(c);
+      return carry;
+    };
+    const allMySportsInfos = sports.reduce(reducer, {});
+    console.log(allMySportsInfos);
+    const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
+    const etBienOui = allMySportsInfosAlphabet.sort().map(letter => (
+      <div>
+        <h4>{letter}</h4>
+        <SportsListFormatted sports={allMySportsInfos[letter]} />
+      </div>
+    ));
+    return etBienOui;
   }
 
   render() {
     return (
       <div>
-        <button type="button" onClick={this.sportsSported}></button>
-        {/* <div><SportsListFormatted name={this.sportsSported.killMe.name}/>
-        </div> */}
+        {/* <button type="button" onClick={this.sportsSorted}>
+          plop
+        </button> */}
+        <this.sportsSorted />
       </div>
     );
   }
