@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
 
-.container {
+div.card {
+  position: initial;
+  text-align: center;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.container-checkbox {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

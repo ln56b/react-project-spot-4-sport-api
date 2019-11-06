@@ -46,8 +46,8 @@ class MapTest extends React.Component {
           {this.state.dataMarkers && (
             <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
+          <MapCheckbox />
         </Map>
-        <MapCheckbox />
       </div>
     );
   }

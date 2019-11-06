@@ -8,7 +8,7 @@ function MapCheckbox() {
     <Card>
       <CardBody className="message">
         <CardTitle className="box-title">Filters</CardTitle>
-        <Form className="container">
+        <Form className="container-checkbox">
           <FormGroup>
             <Label for="exampleCheckbox">Distances</Label>
             <div className="box-list">
@@ -18,7 +18,7 @@ function MapCheckbox() {
               <CustomInput type="checkbox" id="exampleCustomCheckbox4" label="20 km" />
             </div>
           </FormGroup>
-          <FormGroup>
+          {/* <FormGroup>
             <Label for="exampleCheckbox">Sports</Label>
             <div className="box-list">
               <CustomInput type="checkbox" id="exampleCustomCheckbox5" label="Fitness" />
@@ -26,7 +26,7 @@ function MapCheckbox() {
               <CustomInput type="checkbox" id="exampleCustomCheckbox7" label="Basket" />
               <CustomInput type="checkbox" id="exampleCustomCheckbox8" label="Volley" />
             </div>
-          </FormGroup>
+          </FormGroup> */}
         </Form>
       </CardBody>
     </Card>
