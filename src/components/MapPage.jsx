@@ -68,12 +68,15 @@ class MapPage extends React.Component {
     const { city } = this.state;
     const isFinder = dataSearched && this.isPlaces();
     const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
+    const geometryInput = Object.values(center);
+    const inputReversed = geometryInput.reverse();
+    const finalConst = inputReversed.toString();
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
         <NavBar />
         <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
-        <MapTest cityCenter={center} zoomCity={zoom} />
+        <MapTest cityCenter={center} zoomCity={zoom} geometryInput={finalConst} />
       </div>
     );
   }

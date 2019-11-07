@@ -22,17 +22,43 @@ class MapTest extends React.Component {
     this.state = {
       dataMarkers: '',
       location: {
-        lat: 51.505,
-        lng: -0.09
+        lat: '',
+        lng: ''
       },
       haveUsersLocation: false,
       zoom: 2
     };
     this.getSportPlaces = this.getSportPlaces.bind(this);
+    this.askGeolocation = this.askGeolocation.bind(this);
+    // this.geolocationOrSearchBar = this.geolocationOrSearchBar.bind(this);
   }
 
   componentDidMount() {
+    this.askGeolocation();
+  }
+
+  componentDidUpdate() {
     this.getSportPlaces();
+  }
+
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: this.props.geometryInput,
+          radius: 999,
+          sports: 81
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          dataMarkers: data
+        });
+      });
+  }
+
+  askGeolocation() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
         location: {
@@ -45,23 +71,6 @@ class MapTest extends React.Component {
     });
   }
 
-  getSportPlaces() {
-    axios
-      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
-        params: {
-          origin: '-73.582,45.511',
-          radius: 999,
-          sports: 175
-        }
-      })
-      .then(response => response.data.data.features)
-      .then(data => {
-        this.setState({
-          dataMarkers: data
-        });
-      });
-  }
-
   render() {
     const position = [this.state.location.lat, this.state.location.lng];
     const isUserLocation = this.state.haveUsersLocation;
@@ -69,7 +78,6 @@ class MapTest extends React.Component {
     const finalCenter = isUserLocation ? position : this.props.cityCenter;
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }} />
         <Map className="map" zoom={finalZoom} center={finalCenter}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
