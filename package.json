@@ -17,6 +17,7 @@
     "react-leaflet-search": "^0.6.0",
     "react-modal": "^3.11.1",
     "react-native-alphabetlistview": "^0.3.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "reactstrap": "^8.1.1",
     "string-natural-compare": "^3.0.0"
