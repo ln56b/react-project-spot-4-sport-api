@@ -1,12 +1,8 @@
 import React from 'react';
 import SportsProvider from './SportsProvider';
 
-const SportsPage = () => {
-  return (
-    <div>
-      <SportsProvider />
-    </div>
-  );
-};
+function SportsPage() {
+  return <SportsProvider />;
+}
 
 export default SportsPage;

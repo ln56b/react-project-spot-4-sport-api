@@ -70,7 +70,6 @@ class MapTest extends React.Component {
     const finalCenter = isUserLocation ? position : this.props.cityCenter;
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }} />
         <Map className="map" zoom={finalZoom} center={finalCenter}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
