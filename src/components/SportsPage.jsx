@@ -1,12 +1,12 @@
 import React from 'react';
-import DivStructure from './DivStructure';
+import SportsProvider from './SportsProvider';
 
-function SportsPage() {
+const SportsPage = () => {
   return (
     <div>
-      <DivStructure />
+      <SportsProvider />
     </div>
   );
-}
+};
 
 export default SportsPage;
