@@ -1,5 +1,7 @@
-import React from 'react';
-import { Button, Form, Input } from 'reactstrap';
+import React, { Fragment } from 'react';
+import { Button, Form, Input, UncontrolledCollapse, CardBody, Card } from 'reactstrap';
+
+import MapCheckbox from './MapCheckbox';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -25,13 +27,25 @@ class SearchBar extends React.Component {
     const { city } = this.props;
     const { handleSearch } = this.props;
     return (
-      <div>
-        <Form onSubmit={this.handleSubmit}>
-          <Input type="search" placeholder="Search a Spot" value={city} onChange={handleSearch} />
-          <Button outline color="danger" type="submit">
-            Search
-          </Button>
-        </Form>
+      <div className="first-container">
+        <div className="searchbar-container">
+          <Form onSubmit={this.handleSubmit}>
+            <Input type="search" placeholder="Your spot" value={city} onChange={handleSearch} />
+            <Button id="search-button" type="submit">
+              <span role="img">🔎</span>
+            </Button>
+          </Form>
+          <span className="toggle-filters">
+            <Button id="toggler">Filters</Button>
+            <UncontrolledCollapse toggler="#toggler">
+              <Card>
+                <CardBody>
+                  <MapCheckbox />
+                </CardBody>
+              </Card>
+            </UncontrolledCollapse>
+          </span>
+        </div>
       </div>
     );
   }

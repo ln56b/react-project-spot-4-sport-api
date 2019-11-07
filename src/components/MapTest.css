@@ -9,7 +9,7 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
 
 .map {
   display: flex;
-  height: 480px;
+  height: 400px;
   width: 90%;
   border-radius: 25px;
   display: flex;
@@ -18,7 +18,12 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
   margin-bottom: 5%;
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+#toggler {
+  background-color: #c84c4b;
+  border: #c84c4b;
+}
+
+@media only screen and (min-width: 767px) and (orientation: portrait) {
   .map {
     display: flex;
     height: 350px;
