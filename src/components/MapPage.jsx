@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 import MapTest from './MapTest';
 import ApiKey from './Key';
@@ -77,7 +76,6 @@ class MapPage extends React.Component {
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
-        <NavBar />
         <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
         <MapTest cityCenter={center} zoomCity={zoom} geometryInput={finalConst} />
       </div>
