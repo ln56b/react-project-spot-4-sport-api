@@ -5,41 +5,34 @@ class SportsSearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: null,
-      results: []
+      query: '',
+      suggestions: []
     };
-    // this.getInput = this.getInput.bind(this)
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  getInput = () => {
-    this.setState({
-      query: this.sports
-    });
-  };
+  handleInput(event) {
+    this.setState({ query: event.target.value });
+  }
 
-  handleInputChange = () => {
-    this.setState(
-      {
-        query: this.search.value
-      },
-      () => {
-        if (this.state.query && this.state.query.length > 1) {
-          this.getInput();
-        }
-      }
-    );
-  };
+  handleSubmit(event) {
+    alert('submitted : ' + this.state.query);
+    event.preventDefault();
+  }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
+          id="query"
           placeholder="Enter a sport"
-          ref={input => (this.search = input)}
-          onChange={this.handleInputChange}
+          type="text"
+          value={this.state.query}
+          onChange={this.handleInput}
         />
-        <SportsSearchSuggestions results={this.state.results} />
+        <SportsSearchSuggestions sports={this.state.suggestions} />
+        <button>Submit</button>
       </form>
     );
   }

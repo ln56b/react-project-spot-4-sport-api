@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import axios from 'axios';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
+import SportsSearchBar from './SportsSearchBar';
 
 class SportsProvider extends React.Component {
   constructor(props) {
@@ -67,11 +68,16 @@ class SportsProvider extends React.Component {
     const regex = /[A-Z]/;
     const filteredAlphabet = allMySportsInfosAlphabet.filter(letter => letter.match(regex));
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
-      <div>
-        <h4>{letter}</h4>
-        <hr className="hr" />
-        <SportsListFormatted sports={allMySportsInfos[letter]} />
-      </div>
+      <>
+        <div>
+          <SportsSearchBar suggestions={allMySportsInfos[letter]} />
+        </div>
+        <div>
+          <h4>{letter}</h4>
+          <hr className="hr" />
+          <SportsListFormatted sports={allMySportsInfos[letter]} />
+        </div>
+      </>
     ));
     return mySportsListSorted;
   }
