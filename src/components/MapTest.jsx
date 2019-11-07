@@ -30,7 +30,6 @@ class MapTest extends React.Component {
     };
     this.getSportPlaces = this.getSportPlaces.bind(this);
     this.askGeolocation = this.askGeolocation.bind(this);
-    // this.geolocationOrSearchBar = this.geolocationOrSearchBar.bind(this);
   }
 
   componentDidMount() {
@@ -85,7 +84,7 @@ class MapTest extends React.Component {
           />
           {this.state.haveUsersLocation ? (
             <Marker position={position} icon={myIcon}>
-              <Popup>You are here mothafucka</Popup>
+              <Popup>Vous êtes ici.</Popup>
             </Marker>
           ) : (
             ''
