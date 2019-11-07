@@ -46,8 +46,8 @@ class MapTest extends React.Component {
       .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
         params: {
           origin: this.props.geometryInput,
-          radius: 999,
-          sports: 81
+          radius: 200,
+          sports: ''
         }
       })
       .then(response => response.data.data.features)

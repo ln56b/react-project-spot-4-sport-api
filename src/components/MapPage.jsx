@@ -59,6 +59,9 @@ class MapPage extends React.Component {
       if (city === i.components.postcode) {
         return city === i.components.postcode;
       }
+      if (city === i.components.state_district) {
+        return city === i.components.state_district;
+      }
     });
     return finder;
   }
