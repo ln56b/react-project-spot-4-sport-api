@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+
+h2 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+h5,
+a {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 20px;
+}
+.popup {
+  text-align: center;
+}
