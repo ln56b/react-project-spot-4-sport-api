@@ -37,8 +37,10 @@ class MapTest extends React.Component {
     this.askGeolocation();
   }
 
-  componentDidUpdate() {
-    this.getSportPlaces();
+  componentDidUpdate(prevProps) {
+    if (prevProps.geometryInput !== this.props.geometryInput) {
+      this.getSportPlaces();
+    }
   }
 
   getSportPlaces() {
