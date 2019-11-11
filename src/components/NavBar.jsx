@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
-import Burger from './Burger';
+import BurgerMenu from './BurgerMenu';
 import logo from './images/logomap.png';
 
 function NavBar() {
@@ -15,7 +15,7 @@ function NavBar() {
           SPORT
         </NavLink>
       </h1>
-      <Burger />
+      <BurgerMenu />
     </div>
   );
 }
