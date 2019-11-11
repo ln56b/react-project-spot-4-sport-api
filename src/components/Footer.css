@@ -1,2 +1,54 @@
 .footer-container {
+  background-color: #c84c4b;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em;
+}
+
+.footer-container > span {
+  color: white;
+  margin: 2%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.logo-container > img {
+  width: 40%;
+  height: auto;
+  margin: 1%;
+}
+
+@media only screen and (min-width: 1260px) {
+  .footer-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    padding: 0.1em;
+    padding-bottom: 0;
+  }
+
+  .footer-container > span {
+    color: black;
+    margin-bottom: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-around;
+    width: 8%;
+    padding-bottom: 0;
+    padding-top: 1em;
+  }
+
+  .logo-container > img {
+    filter: invert(1);
+    width: 35%;
+    height: auto;
+    margin: 1%;
+  }
 }
