@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/state-in-constructor */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import L from 'leaflet';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
