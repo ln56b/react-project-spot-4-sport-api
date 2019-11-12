@@ -1,20 +1,32 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import './SportsListFormatted.css';
 
 function SportsListFormatted(props) {
-  const [showSearchBar, setShowSearchBar] = useState(null);
+  const [selectedSport, setSelectedSport] = useState(null);
+  const [city, setCity] = useState('');
+  const history = useHistory();
 
   const sportsInLetter = props.sports.map((sport, index) => {
     const notAnIndex = index;
     return (
       <>
-        <div onClick={() => setShowSearchBar(sport.sportId)} role="presentation">
+        <div onClick={() => setSelectedSport(sport.sportId)} role="presentation">
           <li key={notAnIndex}>{sport.sportName}</li>
         </div>
-        {showSearchBar === sport.sportId && (
+        {selectedSport === sport.sportId && (
           <div>
-            <SearchBar />
+            <SearchBar
+              id={sport.sportId}
+              handleSearch={e => setCity(e.target.value)}
+              city={city}
+              dataInput={() => {
+                const url = `/map/${selectedSport}/${city}`;
+                //redirection to /map
+                history.push(url);
+              }}
+            />
           </div>
         )}
       </>

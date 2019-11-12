@@ -50,9 +50,9 @@ class MapTest extends React.Component {
     axios
       .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
         params: {
-          origin: '-73.582,45.511',
+          origin: '',
           radius: 999,
-          sports: 175
+          sports: this.props.sportId || ''
         }
       })
       .then(response => response.data.data.features)

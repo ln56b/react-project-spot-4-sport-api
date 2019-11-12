@@ -77,11 +77,7 @@ class SportsProvider extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <this.sportsSorted />
-      </div>
-    );
+    return <div>{this.sportsSorted()}</div>;
   }
 }
 export default SportsProvider;
