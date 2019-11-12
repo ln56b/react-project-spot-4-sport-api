@@ -70,7 +70,7 @@ class SportsProvider extends React.Component {
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <>
         <div>
-          <SportsSearchBar suggestions={allMySportsInfos[letter]} />
+          <SportsSearchBar sports={allMySportsInfos[letter]} />
         </div>
         <div>
           <h4>{letter}</h4>

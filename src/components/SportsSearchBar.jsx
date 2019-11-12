@@ -6,14 +6,14 @@ class SportsSearchBar extends Component {
     super(props);
     this.state = {
       query: '',
-      suggestions: []
+      sports: []
     };
-    this.handleInput = this.handleInput.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput(event) {
-    this.setState({ query: event.target.value });
+  handleInputChange() {
+    this.setState({ query: this.search.value });
   }
 
   handleSubmit(event) {
@@ -25,13 +25,11 @@ class SportsSearchBar extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          id="query"
           placeholder="Enter a sport"
-          type="text"
-          value={this.state.query}
-          onChange={this.handleInput}
+          ref={input => (this.search = input)}
+          onChange={this.handleInputChange}
         />
-        <SportsSearchSuggestions sports={this.state.suggestions} />
+        <SportsSearchSuggestions sports={this.state.sports} />
         <button>Submit</button>
       </form>
     );
