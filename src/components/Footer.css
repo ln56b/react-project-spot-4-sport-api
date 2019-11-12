@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 0.2em;
   height: 8vh;
+  margin-bottom: 0;
 }
 
 .footer-container > span {
@@ -50,7 +51,8 @@
   .logo-container > img {
     filter: invert(1);
     object-fit: cover;
-    width: 30%;
+    width: 35%;
+    height: auto;
     margin: 1%;
   }
 }
