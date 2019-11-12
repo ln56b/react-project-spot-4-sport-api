@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.2em;
+  height: 8vh;
 }
 
 .footer-container > span {
