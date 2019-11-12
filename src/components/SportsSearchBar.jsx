@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input } from 'reactstrap';
 import SportsSearchSuggestions from './SportsSearchSuggestions';
 
 class SportsSearchBar extends Component {
@@ -6,14 +7,26 @@ class SportsSearchBar extends Component {
     super(props);
     this.state = {
       query: '',
-      results: this.props.results
+      results: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  getInfo() {
+    this.setState({ results: this.state.results });
+  }
+
   handleInputChange() {
-    this.setState({ query: this.search.value });
+    this.setState({ query: this.search.value }, () => {
+      if (this.state.query && this.state.query.length > 2) {
+        this.getInfo();
+      } else {
+        this.setState({
+          results: this.state.results
+        });
+      }
+    });
   }
 
   handleSubmit(event) {
@@ -28,6 +41,7 @@ class SportsSearchBar extends Component {
           placeholder="Enter a sport"
           ref={input => (this.search = input)}
           onChange={this.handleInputChange}
+          type="text"
         />
         <SportsSearchSuggestions results={this.state.results} />
         <button>Submit</button>
