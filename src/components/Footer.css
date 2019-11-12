@@ -19,6 +19,7 @@
 
 .logo-container > img {
   width: 40%;
+  object-fit: contain;
   height: auto;
   margin: 1%;
 }
@@ -48,8 +49,8 @@
 
   .logo-container > img {
     filter: invert(1);
-    width: 35%;
-    height: auto;
+    object-fit: cover;
+    width: 30%;
     margin: 1%;
   }
 }
