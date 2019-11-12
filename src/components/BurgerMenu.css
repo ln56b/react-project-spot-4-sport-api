@@ -25,7 +25,8 @@ body {
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  margin-top: -4%;
+  margin-left: -4%;
 }
 
 .bm-burger-bars {
@@ -42,9 +43,12 @@ body {
 }
 
 .bm-menu {
+  display: flex;
+  margin-top: -10%;
   background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  border-right: 2px solid #c84c4b;
 }
 
 .bm-morph-shape {
@@ -57,4 +61,5 @@ body {
 
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  margin-top: -8%;
 }
