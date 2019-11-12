@@ -6,7 +6,7 @@ import iconGeo from '../iconsHomePage/iconGeo.png';
 
 const HomePage = () => {
   return (
-    <div className="homePageBody">
+    <div className="homePageBody backgroundImage">
       <NavLink to="/map" className="homePageLinks">
         <div className="homePageDivMap">
           <h4>I want a spot</h4>
