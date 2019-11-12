@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
 
@@ -10,12 +11,14 @@ class SportsProvider extends React.Component {
       sports: []
     };
     this.getSport = this.getSport.bind(this);
+    this.scrolledList = this.scrolledList.bind(this);
     this.sportsSorted = this.sportsSorted.bind(this);
   }
 
   componentDidMount() {
     this.getSport();
     this.sportsSorted();
+    this.scrolledList();
   }
 
   getSport() {
@@ -69,16 +72,32 @@ class SportsProvider extends React.Component {
     );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <div>
-        <h4>{letter}</h4>
+        <h4 name={letter}>{letter}</h4>
         <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
       </div>
     ));
     return mySportsListSorted;
   }
 
+  scrolledList() {
+    const letterArr = [];
+    for (let i = 0; i < 26; i += 1) {
+      letterArr.push(String.fromCharCode(65 + i));
+    }
+    const gettingScroll = letterArr.map(letter => {
+      return (
+        <Link activeClass="active" to={letter} spy={true} smooth offset={-70} duration={500}>
+          {letter}
+        </Link>
+      );
+    });
+    return gettingScroll;
+  }
+
   render() {
     return (
       <div>
+        <this.scrolledList />
         <this.sportsSorted />
       </div>
     );
