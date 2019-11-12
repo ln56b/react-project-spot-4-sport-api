@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
 
@@ -86,7 +86,15 @@ class SportsProvider extends React.Component {
     }
     const gettingScroll = letterArr.map(letter => {
       return (
-        <Link activeClass="active" to={letter} spy={true} smooth offset={-70} duration={500}>
+        <Link
+          activeClass="active"
+          to={letter}
+          spy
+          smooth
+          offset={-70}
+          duration={500}
+          style={{ fontSize: '16px' }}
+        >
           {letter}
         </Link>
       );
@@ -96,9 +104,13 @@ class SportsProvider extends React.Component {
 
   render() {
     return (
-      <div>
-        <this.scrolledList />
-        <this.sportsSorted />
+      <div className="sportsProvider-container">
+        <div className="list-sports">
+          <this.sportsSorted />
+        </div>
+        <div className="link-alphabet">
+          <this.scrolledList />
+        </div>
       </div>
     );
   }
