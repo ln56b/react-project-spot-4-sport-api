@@ -6,7 +6,7 @@ class SportsSearchBar extends Component {
     super(props);
     this.state = {
       query: '',
-      sports: []
+      results: this.props.results
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,7 +29,7 @@ class SportsSearchBar extends Component {
           ref={input => (this.search = input)}
           onChange={this.handleInputChange}
         />
-        <SportsSearchSuggestions sports={this.state.sports} />
+        <SportsSearchSuggestions results={this.state.results} />
         <button>Submit</button>
       </form>
     );

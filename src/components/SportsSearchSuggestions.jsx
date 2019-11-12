@@ -1,8 +1,8 @@
 import React from 'react';
 
 function SportsSearchSuggestions(props) {
-  const options = props.sports.map(sport => {
-    return <li key={sport.id}>{sport.name}</li>;
+  const options = props.results.map(result => {
+    return <li key={result.id}>{result.name}</li>;
   });
   return <ul>{options}</ul>;
 }
