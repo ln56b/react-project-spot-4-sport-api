@@ -28,9 +28,16 @@ div.formGroup-contact.form-group {
   margin-top: 12px;
 }
 
+div.form-sous-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .intro h2 {
   margin-top: 5px;
 }
+
 .form-contact {
   display: flex;
   flex-direction: column;
@@ -62,4 +69,42 @@ input.text-area-email.form-control {
 
 textarea.text-area.form-control {
   width: 100%;
+}
+
+@media only screen and (min-width: 1260px) {
+  .form-container {
+    /* background-color: #e5e5e5; */
+    background-image: url('./images/FondSansDegradé.png');
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+  div.form-sous-container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+  }
+  form.form-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro h2 {
+    font-size: 50px;
+  }
+  .intro p {
+    font-size: 30px;
+  }
+  label.label-form-contact {
+    font-size: 25px;
+  }
+  .formGroup-contact {
+    display: flex;
+  }
+  div.line {
+    display: flex;
+    flex-direction: row;
+  }
+  a.btn.btn-outline-danger {
+    font-size: 25px;
+  }
 }
