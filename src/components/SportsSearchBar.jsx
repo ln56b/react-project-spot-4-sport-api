@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SportsSearchSuggestions from './SportsSearchSuggestions';
+import './SportsSearchBar.css';
 import axios from 'axios';
 
 const url = 'https://sports.api.decathlon.com/sports';
@@ -12,7 +13,6 @@ class SportsSearchBar extends Component {
       results: []
     };
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   getInfo() {
@@ -45,14 +45,9 @@ class SportsSearchBar extends Component {
     });
   }
 
-  handleSubmit(event) {
-    alert('submitted : ' + this.state.query);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="sportSearchBarDiv">
+      <form className="sportSearchBarDiv">
         <input
           className="sportSearchBarInput"
           placeholder="Enter a sport"
@@ -61,7 +56,6 @@ class SportsSearchBar extends Component {
           value={this.state.query}
         />
         <SportsSearchSuggestions results={this.state.results} query={this.state.query} />
-        <button>Submit</button>
       </form>
     );
   }

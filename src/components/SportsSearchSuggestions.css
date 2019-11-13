@@ -1,9 +1,27 @@
 .result {
-  overflow-y: auto;
   position: absolute;
+  padding: 0.5rem;
+  width: 300px;
+  margin-bottom: 2em;
 }
 
-.result-li {
-  background: white;
+.suggestion {
   border: 1px solid #c84c4b;
+  border-top-width: 0;
+  height: 1.5em;
+  margin-top: 0;
+  margin-left: -2em;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(300px - 1rem);
+}
+
+.suggestion:hover {
+  color: white;
+  background: #c84c4b;
+  font-weight: bold;
+}
+
+.suggestions {
+  margin-top: 1em;
 }
