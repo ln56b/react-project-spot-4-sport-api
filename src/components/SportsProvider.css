@@ -23,3 +23,10 @@ h4 {
 .list-sports {
   align-self: flex-start;
 }
+
+@media screen and (min-width: 768px) {
+  .link-alphabet {
+    display: flex;
+    align-self: flex-start;
+  }
+}
