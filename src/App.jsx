@@ -9,7 +9,7 @@ import HomePage from './components/HomePage';
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar className="fixed-navbar" />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/map/:sportId/:city" component={MapPage} />
