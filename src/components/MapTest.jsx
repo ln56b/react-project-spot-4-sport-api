@@ -19,17 +19,44 @@ class MapTest extends React.Component {
     this.state = {
       dataMarkers: '',
       location: {
-        lat: 51.505,
-        lng: -0.09
+        lat: '',
+        lng: ''
       },
       haveUsersLocation: false,
       zoom: 2
     };
     this.getSportPlaces = this.getSportPlaces.bind(this);
+    this.askGeolocation = this.askGeolocation.bind(this);
   }
 
   componentDidMount() {
-    this.getSportPlaces();
+    this.askGeolocation();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.geometryInput !== this.props.geometryInput) {
+      this.getSportPlaces();
+    }
+  }
+
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: this.props.geometryInput,
+          radius: 200,
+          sports: ''
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          dataMarkers: data
+        });
+      });
+  }
+
+  askGeolocation() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
         location: {
@@ -40,23 +67,6 @@ class MapTest extends React.Component {
         zoom: 13
       });
     });
-  }
-
-  getSportPlaces() {
-    axios
-      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
-        params: {
-          origin: '-73.582,45.511',
-          radius: 999,
-          sports: 175
-        }
-      })
-      .then(response => response.data.data.features)
-      .then(data => {
-        this.setState({
-          dataMarkers: data
-        });
-      });
   }
 
   render() {
@@ -73,7 +83,7 @@ class MapTest extends React.Component {
           />
           {this.state.haveUsersLocation ? (
             <Marker position={position} icon={myIcon}>
-              <Popup>You are here mothafucka</Popup>
+              <Popup>Vous êtes ici.</Popup>
             </Marker>
           ) : (
             ''
