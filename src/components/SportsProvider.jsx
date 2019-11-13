@@ -70,7 +70,6 @@ class SportsProvider extends React.Component {
       letter.match(filterOutNumber)
     );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
-<<<<<<< HEAD
       <>
         <div></div>
         <div>
@@ -79,12 +78,6 @@ class SportsProvider extends React.Component {
           <SportsListFormatted sports={allMySportsInfos[letter]} />
         </div>
       </>
-=======
-      <div>
-        <h4>{letter}</h4>
-        <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
-      </div>
->>>>>>> dev
     ));
     return mySportsListSorted;
   }
