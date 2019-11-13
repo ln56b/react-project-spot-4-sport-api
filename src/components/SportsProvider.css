@@ -17,16 +17,26 @@ h4 {
   bottom: 20px;
   position: fixed;
 }
-.alphabet-size {
-  font-family: 16px;
+div.link-alphabet a {
+  font-size: 16px;
 }
 .list-sports {
   align-self: flex-start;
 }
 
 @media screen and (min-width: 768px) {
+  .sportsProvider-container {
+    justify-content: space-between;
+  }
   .link-alphabet {
     display: flex;
-    align-self: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+    font-size: 20px;
+  }
+  div.link-alphabet a {
+    font-size: 20px;
+    padding: 1px;
   }
 }
