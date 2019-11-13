@@ -1,0 +1,16 @@
+.result {
+  border-radius: 4px;
+  position: absolute;
+  background: white;
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion {
+  z-index: 100;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

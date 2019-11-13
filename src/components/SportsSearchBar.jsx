@@ -28,21 +28,24 @@ class SportsSearchBar extends Component {
       })
       .then(data => {
         console.log(data);
-        this.setState({ results: data });
+        this.setState({
+          results: data
+        });
       });
   }
 
-  handleInputChange() {
-    this.setState({ query: this.search.value }, () => {
-      if (this.state.query && this.state.query.length > 1) {
-        this.getInfo();
-      } else {
-        this.setState({
-          results: this.state.results,
-          query: this.search.value
-        });
-      }
-    });
+  handleInputChange(event) {
+    // this.setState({ query: event.target.value }, () => {
+    if (this.state.query && this.state.query.length > 1) {
+      this.getInfo();
+    } else {
+      this.setState({
+        results: this.state.results,
+        // query: this.search.value
+        query: event.target.value
+      });
+    }
+    // });
   }
 
   handleSubmit(event) {
@@ -55,9 +58,11 @@ class SportsSearchBar extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           placeholder="Enter a sport"
-          ref={input => (this.search = input)}
+          // ref={input => (this.search = input)}
           onChange={this.handleInputChange}
           type="text"
+          value={this.state.query}
+          class="form-control"
         />
         <SportsSearchSuggestions results={this.state.results} query={this.state.query} />
         <button>Submit</button>
