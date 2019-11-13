@@ -7,7 +7,26 @@ h4 {
   border: 1px solid #c84c4b;
   margin: 0 3em;
 }
-​ @media (min-width: 1260px) {
-  h4 {
+.sportsProvider-container {
+  display: flex;
+}
+.link-alphabet {
+  display: flex;
+  flex-direction: column;
+  right: 10px;
+  bottom: 20px;
+  position: fixed;
+}
+.alphabet-size {
+  font-family: 16px;
+}
+.list-sports {
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .link-alphabet {
+    display: flex;
+    align-self: flex-start;
   }
 }
