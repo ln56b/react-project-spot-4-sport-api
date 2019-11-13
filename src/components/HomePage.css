@@ -12,7 +12,7 @@
   justify-content: center;
   flex-direction: column;
   background: #c84c4b;
-  min-height: 41vh;
+  height: 41vh;
 }
 
 .homePageDivMap h4 {
