@@ -1,5 +1,9 @@
 .result {
   overflow-y: auto;
   position: absolute;
+}
+
+.result-li {
+  background: white;
   border: 1px solid #c84c4b;
 }

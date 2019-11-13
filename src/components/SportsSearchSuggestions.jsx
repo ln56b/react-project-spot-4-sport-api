@@ -7,7 +7,7 @@ function SportsSearchSuggestions({ query, results }) {
     if (res.name.includes(query)) {
       return (
         <Link activeClass="active" to={res.name} className="suggestions">
-          <li>{res.name}</li>
+          <li className="result-li">{res.name}</li>
         </Link>
       );
     }
