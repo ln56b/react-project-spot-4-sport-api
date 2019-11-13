@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-scroll';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
+import SportsSearchBar from './SportsSearchBar';
 
 class SportsProvider extends React.Component {
   constructor(props) {
@@ -110,6 +111,9 @@ class SportsProvider extends React.Component {
         </div>
         <div className="link-alphabet">
           <this.scrolledList />
+        </div>
+        <div>
+          <SportsSearchBar results={this.state.sports} />
         </div>
       </div>
     );
