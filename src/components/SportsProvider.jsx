@@ -54,6 +54,7 @@ class SportsProvider extends React.Component {
 
   sportsSorted() {
     const { sports } = this.state;
+    const filterOutNumber = /[A-Z]/;
     const reducer = (carry, c) => {
       const key = c.sportFirstLetter;
       if (!carry[key]) {
@@ -65,9 +66,11 @@ class SportsProvider extends React.Component {
     };
     const allMySportsInfos = sports.reduce(reducer, {});
     const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
-    const regex = /[A-Z]/;
-    const filteredAlphabet = allMySportsInfosAlphabet.filter(letter => letter.match(regex));
+    const filteredAlphabet = allMySportsInfosAlphabet.filter(letter =>
+      letter.match(filterOutNumber)
+    );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
+<<<<<<< HEAD
       <>
         <div></div>
         <div>
@@ -76,6 +79,12 @@ class SportsProvider extends React.Component {
           <SportsListFormatted sports={allMySportsInfos[letter]} />
         </div>
       </>
+=======
+      <div>
+        <h4>{letter}</h4>
+        <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
+      </div>
+>>>>>>> dev
     ));
     return mySportsListSorted;
   }

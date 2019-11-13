@@ -1,0 +1,41 @@
+.homePageBody {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.homePageDivMap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #c84c4b;
+  height: 45%;
+}
+
+.homePageDivMap h4 {
+  color: white;
+}
+
+.homePageDivSport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+  height: 50%;
+}
+
+.homePageDivSport h4 {
+  color: #c84c4b;
+}
+
+.homePageIcon {
+  height: auto;
+  width: 20%;
+  padding: 1em 0;
+}
+.homePageLinks:link,
+.homePageLinks:hover {
+  text-decoration: none;
+}

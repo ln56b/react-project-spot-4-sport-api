@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/state-in-constructor */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import L from 'leaflet';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -8,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
 import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
+import MapCheckbox from './MapCheckbox';
 
 const myIcon = L.icon({
   iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
@@ -22,17 +20,44 @@ class MapTest extends React.Component {
     this.state = {
       dataMarkers: '',
       location: {
-        lat: 51.505,
-        lng: -0.09
+        lat: '',
+        lng: ''
       },
       haveUsersLocation: false,
       zoom: 2
     };
     this.getSportPlaces = this.getSportPlaces.bind(this);
+    this.askGeolocation = this.askGeolocation.bind(this);
   }
 
   componentDidMount() {
-    this.getSportPlaces();
+    this.askGeolocation();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.geometryInput !== this.props.geometryInput) {
+      this.getSportPlaces();
+    }
+  }
+
+  getSportPlaces() {
+    axios
+      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
+        params: {
+          origin: this.props.geometryInput,
+          radius: 200,
+          sports: ''
+        }
+      })
+      .then(response => response.data.data.features)
+      .then(data => {
+        this.setState({
+          dataMarkers: data
+        });
+      });
+  }
+
+  askGeolocation() {
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
         location: {
@@ -45,23 +70,6 @@ class MapTest extends React.Component {
     });
   }
 
-  getSportPlaces() {
-    axios
-      .get('https://sportplaces.api.decathlon.com/api/v1/places?', {
-        params: {
-          origin: '-73.582,45.511',
-          radius: 999,
-          sports: 175
-        }
-      })
-      .then(response => response.data.data.features)
-      .then(data => {
-        this.setState({
-          dataMarkers: data
-        });
-      });
-  }
-
   render() {
     const position = [this.state.location.lat, this.state.location.lng];
     const isUserLocation = this.state.haveUsersLocation;
@@ -69,7 +77,6 @@ class MapTest extends React.Component {
     const finalCenter = isUserLocation ? position : this.props.cityCenter;
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }} />
         <Map className="map" zoom={finalZoom} center={finalCenter}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -77,7 +84,7 @@ class MapTest extends React.Component {
           />
           {this.state.haveUsersLocation ? (
             <Marker position={position} icon={myIcon}>
-              <Popup>You are here mothafucka</Popup>
+              <Popup>Vous êtes ici.</Popup>
             </Marker>
           ) : (
             ''
@@ -85,6 +92,7 @@ class MapTest extends React.Component {
           {this.state.dataMarkers && (
             <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
+          <MapCheckbox />
         </Map>
       </div>
     );
