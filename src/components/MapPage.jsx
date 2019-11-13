@@ -1,43 +1,95 @@
 import React from 'react';
-import NavBar from './NavBar';
+import axios from 'axios';
 import SearchBar from './SearchBar';
 import MapTest from './MapTest';
-import places from './Places';
+import ApiKey from './Key';
 
 class MapPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // eslint-disable-next-line react/no-unused-state
-      city: ''
+      city: props.match.params.city || '',
+      dataSearched: ''
     };
 
     this.handleGoClick = this.handleGoClick.bind(this);
     this.isPlaces = this.isPlaces.bind(this);
+    this.getLatLon = this.getLatLon.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
-  handleGoClick(city) {
-    // eslint-disable-next-line react/no-unused-state
-    this.setState({ city });
+  componentDidMount() {
+    const { city } = this.state;
+    if (city) {
+      this.getLatLon();
+    }
+  }
+
+  getLatLon() {
+    const { city } = this.state;
+    axios
+      .get('https://api.opencagedata.com/geocode/v1/json', {
+        params: {
+          q: city,
+          key: ApiKey,
+          pretty: 1,
+          language: 'fr'
+        }
+      })
+      .then(response => response.data.results)
+      .then(data => {
+        this.setState({
+          dataSearched: data
+        });
+      });
+  }
+
+  handleSearch(event) {
+    this.setState({ city: event.target.value });
+  }
+
+  handleGoClick() {
+    this.getLatLon();
   }
 
   isPlaces() {
-    const finder = places.city.find(i => {
-      return this.state.city === i.name;
+    const { dataSearched } = this.state;
+    const { city } = this.state;
+    const finder = dataSearched.find(i => {
+      if (city === i.components.city) {
+        return city === i.components.city;
+      }
+      if (city === i.components.country) {
+        return city === i.components.country;
+      }
+      if (city === i.components.postcode) {
+        return city === i.components.postcode;
+      }
+      if (city === i.components.state_district) {
+        return city === i.components.state_district;
+      }
     });
-    console.log(finder);
     return finder;
   }
 
   render() {
-    const isFinder = this.isPlaces();
-    const center = isFinder ? isFinder.coordinates : [-0.09, 51.505];
+    const { dataSearched } = this.state;
+    const { city } = this.state;
+    const isFinder = dataSearched && this.isPlaces();
+    const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
+    const geometryInput = Object.values(center);
+    const inputReversed = geometryInput.reverse();
+    const finalConst = inputReversed.toString();
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
-        <NavBar />
-        <SearchBar dataInput={this.handleGoClick} />
-        <MapTest cityCenter={center} zoomCity={zoom} />
+        <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
+        <MapTest
+          cityCenter={center}
+          zoomCity={zoom}
+          geometryInput={finalConst}
+          sportId={this.props.match.params.sportId}
+        />
       </div>
     );
   }

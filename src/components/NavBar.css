@@ -1,38 +1,45 @@
-.logo,
+.navLogo,
 .burger {
   height: 80px;
   width: 80px;
 }
 
-.four {
+.navFour {
   font-size: 50px;
   color: #c84c4b;
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
 }
 
-.container {
+.navContainer {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 1em;
 }
-
-h1 {
+.logoLink {
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
-  font-size: 40px;
+  font-size: 1em;
   margin: 0%;
+  font-style: bold;
+  color: black;
+}
+.logoLink:link,
+.logoLink:hover {
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  .logo,
-  .burger {
+  .navLogo {
     height: 50px;
     width: 50px;
   }
-  h1 {
+  .logoLink {
     font-size: 30px;
     margin: 0%;
   }
-  .four {
+  .navFour {
     font-size: 40px;
   }
 }

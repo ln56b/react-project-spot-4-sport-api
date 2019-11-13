@@ -1,13 +1,8 @@
 import React from 'react';
-import axios from 'axios';
-import DivStructure from './DivStructure';
+import SportsProvider from './SportsProvider';
 
 function SportsPage() {
-  return (
-    <div>
-      <DivStructure />
-    </div>
-  );
+  return <SportsProvider />;
 }
 
 export default SportsPage;

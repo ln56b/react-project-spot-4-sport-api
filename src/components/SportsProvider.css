@@ -1,0 +1,32 @@
+h4 {
+  color: #c84c4b;
+  margin: 0 3em;
+  padding: 0.5em;
+}
+​ .hr {
+  border: 1px solid #c84c4b;
+  margin: 0 3em;
+}
+.sportsProvider-container {
+  display: flex;
+}
+.link-alphabet {
+  display: flex;
+  flex-direction: column;
+  right: 10px;
+  bottom: 20px;
+  position: fixed;
+}
+.alphabet-size {
+  font-family: 16px;
+}
+.list-sports {
+  align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .link-alphabet {
+    display: flex;
+    align-self: flex-start;
+  }
+}

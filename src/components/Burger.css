@@ -1,0 +1,20 @@
+button.btn-secondary:hover {
+  color: #fff;
+  background-color: #c84c4b;
+  border-color: #c84c4b;
+}
+
+button.dropdown-toggle.btn.btn-secondary {
+  color: #fff;
+  background-color: #c84c4b;
+  border-color: #c84c4b;
+  margin-top: 12%;
+}
+.burgerLink {
+  color: black;
+}
+.burgerLink:link,
+.burgerLink:hover {
+  text-decoration: none;
+  color: black;
+}
