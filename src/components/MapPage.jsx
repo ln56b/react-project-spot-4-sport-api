@@ -65,6 +65,9 @@ class MapPage extends React.Component {
       if (city === i.components.postcode) {
         return city === i.components.postcode;
       }
+      if (city === i.components.state_district) {
+        return city === i.components.state_district;
+      }
     });
     return finder;
   }
@@ -74,11 +77,19 @@ class MapPage extends React.Component {
     const { city } = this.state;
     const isFinder = dataSearched && this.isPlaces();
     const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
+    const geometryInput = Object.values(center);
+    const inputReversed = geometryInput.reverse();
+    const finalConst = inputReversed.toString();
     const zoom = isFinder ? 12 : 3;
     return (
       <div>
         <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
-        <MapTest cityCenter={center} zoomCity={zoom} sportId={this.props.match.params.sportId} />
+        <MapTest
+          cityCenter={center}
+          zoomCity={zoom}
+          geometryInput={finalConst}
+          sportId={this.props.match.params.sportId}
+        />
       </div>
     );
   }
