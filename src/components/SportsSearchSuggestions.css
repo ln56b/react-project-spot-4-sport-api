@@ -5,22 +5,30 @@
 }
 
 .suggestion {
-  border: 1px solid #c84c4b;
+  border: 2px solid #c84c4b;
   border-top-width: 0;
-  height: 1.5em;
+  height: auto;
   margin-top: 0;
   margin-left: 0;
   overflow-y: auto;
-  padding-left: 0.5em;
+  padding: 0.5em;
   width: calc(300px - 1rem);
 }
 
-.suggestion:hover {
-  color: white;
-  background: #c84c4b;
-  font-weight: bold;
+.suggestions:active {
+  visibility: hidden;
 }
 
-.suggestion:active {
-  display: none;
+@media only screen and (min-width: 1260px) {
+  .suggestion {
+    border: 1px solid #c84c4b;
+    height: 2rem;
+    padding: 0 0 0 0.5rem;
+  }
+
+  .suggestion:hover {
+    color: white;
+    background: #c84c4b;
+    font-weight: bold;
+  }
 }
