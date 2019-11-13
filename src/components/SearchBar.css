@@ -14,7 +14,6 @@ input.form-control {
   background-color: #ffffff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 15px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 input {
@@ -28,10 +27,10 @@ input {
 
 .searchbar-container {
   background-color: #c84c4b;
-  width: 80%;
+  border-radius: 15px;
+  width: 90%;
   margin: 3%;
   padding: 2%;
-  border-radius: 5%;
 }
 
 .toggle-filters {
@@ -40,6 +39,12 @@ input {
 }
 
 #search-button {
-  background-color: #ffffff;
+  background-color: transparent;
   border-color: #c84c4b;
+}
+
+#search-logo {
+  filter: invert(1);
+  width: 22px;
+  height: auto;
 }

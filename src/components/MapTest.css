@@ -9,9 +9,9 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
 
 .map {
   display: flex;
-  height: 400px;
+  height: 600px;
   width: 90%;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   align-content: center;
   margin-left: 5%;
@@ -28,7 +28,7 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
     display: flex;
     height: 350px;
     width: 90%;
-    border-radius: 25px;
+    border-radius: 15px;
     display: flex;
     align-content: center;
     margin-left: 5%;

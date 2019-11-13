@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
-import { Button, Form, Input, UncontrolledCollapse, CardBody, Card } from 'reactstrap';
-
-import MapCheckbox from './MapCheckbox';
+import { Button, Form, Input } from 'reactstrap';
+import searchLogo from './images/search.png';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -32,19 +31,9 @@ class SearchBar extends React.Component {
           <Form onSubmit={this.handleSubmit}>
             <Input type="search" placeholder="Your spot" value={city} onChange={handleSearch} />
             <Button id="search-button" type="submit">
-              <span role="img">🔎</span>
+              <img id="search-logo" src={searchLogo} alt="glass" />
             </Button>
           </Form>
-          <span className="toggle-filters">
-            <Button id="toggler">Filters</Button>
-            <UncontrolledCollapse toggler="#toggler">
-              <Card>
-                <CardBody>
-                  <MapCheckbox />
-                </CardBody>
-              </Card>
-            </UncontrolledCollapse>
-          </span>
         </div>
       </div>
     );
