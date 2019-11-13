@@ -1,0 +1,10 @@
+@media only screen and (min-width: 1260px) {
+  .map-page-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #searchbar-item {
+    align-self: flex-end;
+  }
+}
