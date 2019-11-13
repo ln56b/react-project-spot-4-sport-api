@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SportsSearchSuggestions from './SportsSearchSuggestions';
-import './SportsSearchBar.css';
+import './SportSearchBar.css';
 import axios from 'axios';
 
 const url = 'https://sports.api.decathlon.com/sports';
