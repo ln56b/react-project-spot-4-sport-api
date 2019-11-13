@@ -18,8 +18,8 @@ function BurgerMenu() {
         MAP
       </NavLink>
 
-      <NavLink to="/about" className="burgerLink">
-        ABOUT
+      <NavLink to="/aboutus" className="burgerLink">
+        ABOUT US
       </NavLink>
 
       <NavLink to="/help" className="burgerLink">

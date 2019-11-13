@@ -1,0 +1,18 @@
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-container {
+  display: flex;
+}
+
+.intro-container > img {
+  max-width: 150px;
+  height: ;
+}
