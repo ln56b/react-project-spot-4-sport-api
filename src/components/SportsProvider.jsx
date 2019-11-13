@@ -69,9 +69,7 @@ class SportsProvider extends React.Component {
     const filteredAlphabet = allMySportsInfosAlphabet.filter(letter => letter.match(regex));
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <>
-        <div>
-          <SportsSearchBar results={this.state.sports} />
-        </div>
+        <div></div>
         <div>
           <h4>{letter}</h4>
           <hr className="hr" />
@@ -85,6 +83,7 @@ class SportsProvider extends React.Component {
   render() {
     return (
       <div>
+        <SportsSearchBar results={this.state.sports} />
         <this.sportsSorted />
       </div>
     );

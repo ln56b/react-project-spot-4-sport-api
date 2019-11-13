@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Input } from 'reactstrap';
 import SportsSearchSuggestions from './SportsSearchSuggestions';
+import axios from 'axios';
+
+const url = 'https://sports.api.decathlon.com/sports';
 
 class SportsSearchBar extends Component {
   constructor(props) {
@@ -14,16 +16,30 @@ class SportsSearchBar extends Component {
   }
 
   getInfo() {
-    this.setState({ results: this.state.results });
+    axios
+      .get(`${url}?query=${this.state.query}`)
+      .then(response => response.data.data)
+      .then(data => {
+        return data.map(sport => {
+          return {
+            name: sport.attributes.name
+          };
+        });
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ results: data });
+      });
   }
 
   handleInputChange() {
     this.setState({ query: this.search.value }, () => {
-      if (this.state.query && this.state.query.length > 2) {
+      if (this.state.query && this.state.query.length > 1) {
         this.getInfo();
       } else {
         this.setState({
-          results: this.state.results
+          results: this.state.results,
+          query: this.search.value
         });
       }
     });
@@ -43,7 +59,7 @@ class SportsSearchBar extends Component {
           onChange={this.handleInputChange}
           type="text"
         />
-        <SportsSearchSuggestions results={this.state.results} />
+        <SportsSearchSuggestions results={this.state.results} query={this.state.query} />
         <button>Submit</button>
       </form>
     );

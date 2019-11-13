@@ -8,7 +8,7 @@ class SportsSearchBar extends Component {
       query: null,
       results: []
     };
-    // this.getInput = this.getInput.bind(this)
+    this.getInput = this.getInput.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
