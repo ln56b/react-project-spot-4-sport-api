@@ -105,15 +105,17 @@ class SportsProvider extends React.Component {
 
   render() {
     return (
-      <div className="sportsProvider-container">
-        <div className="list-sports">
-          <this.sportsSorted />
-        </div>
-        <div className="link-alphabet">
-          <this.scrolledList />
-        </div>
-        <div>
+      <div>
+        <div className="sportsSearchBar-container">
           <SportsSearchBar results={this.state.sports} />
+        </div>
+        <div className="sportsProvider-container">
+          <div className="list-sports">
+            <this.sportsSorted />
+          </div>
+          <div className="link-alphabet">
+            <this.scrolledList />
+          </div>
         </div>
       </div>
     );

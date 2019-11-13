@@ -18,7 +18,6 @@ class SportsSearchBar extends Component {
   getInfo() {
     axios
       .get(url)
-      // .get(`${url}?query=${this.state.query}`)
       .then(response => response.data.data)
       .then(data => {
         return data.map(sport => {
@@ -35,8 +34,6 @@ class SportsSearchBar extends Component {
   }
 
   handleInputChange(event) {
-    // this.setState({
-    //   query: event.target.value})
     this.setState({ query: event.target.value }, () => {
       if (this.state.query && this.state.query.length > 1) {
         this.getInfo();
@@ -59,7 +56,6 @@ class SportsSearchBar extends Component {
         <input
           className="sportSearchBarInput"
           placeholder="Enter a sport"
-          // ref={input => (this.search = input)}
           onChange={this.handleInputChange}
           type="text"
           value={this.state.query}
