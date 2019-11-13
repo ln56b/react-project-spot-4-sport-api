@@ -104,10 +104,6 @@ class SportsProvider extends React.Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className="">
-        <this.sportsSorted />
-=======
       <div className="sportsProvider-container">
         <div className="list-sports">
           <this.sportsSorted />
@@ -115,7 +111,6 @@ class SportsProvider extends React.Component {
         <div className="link-alphabet">
           <this.scrolledList />
         </div>
->>>>>>> dev
       </div>
     );
   }
