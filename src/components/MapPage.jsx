@@ -8,7 +8,7 @@ class MapPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: '',
+      city: props.match.params.city || '',
       dataSearched: ''
     };
 
@@ -16,6 +16,13 @@ class MapPage extends React.Component {
     this.isPlaces = this.isPlaces.bind(this);
     this.getLatLon = this.getLatLon.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  componentDidMount() {
+    const { city } = this.state;
+    if (city) {
+      this.getLatLon();
+    }
   }
 
   getLatLon() {
@@ -77,7 +84,12 @@ class MapPage extends React.Component {
     return (
       <div>
         <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
-        <MapTest cityCenter={center} zoomCity={zoom} geometryInput={finalConst} />
+        <MapTest
+          cityCenter={center}
+          zoomCity={zoom}
+          geometryInput={finalConst}
+          sportId={this.props.match.params.sportId}
+        />
       </div>
     );
   }
