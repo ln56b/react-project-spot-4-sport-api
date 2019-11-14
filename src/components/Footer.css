@@ -28,9 +28,8 @@
   margin: 1vh;
 }
 
-a:link {
+a {
   color: #c84c4b;
-  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -75,5 +74,6 @@ a:link {
   }
   a:hover {
     color: #c84c4b;
+    text-decoration: none;
   }
 }
