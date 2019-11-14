@@ -6,10 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 8px;
   padding-top: 8px;
   margin-top: 60px;
 }
+
+/* .contact-container {
+  display: flex;
+  flex-direction: column;
+} */
 
 .intro {
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -35,6 +39,7 @@ div.form-sous-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 8px;
 }
 
 .intro h2 {
@@ -78,7 +83,7 @@ textarea.text-area.form-control {
   .form-container {
     /* background-color: #e5e5e5; */
     background-image: url('./images/FondSansDegradé.png');
-    height: 700px;
+    height: 750px;
     display: flex;
     justify-content: center;
     margin-top: 0;
