@@ -7,6 +7,10 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
   z-index: 2;
 }
 
+.map-container {
+  height: 77.4vh;
+}
+
 .map {
   display: flex;
   height: 480px;

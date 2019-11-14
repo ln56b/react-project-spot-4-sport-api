@@ -6,6 +6,7 @@ import MapPage from './components/MapPage';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import HelpPage from './components/HelpPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sports" component={SportsPage} />
         <Route path="/help" component={HelpPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }
