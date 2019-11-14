@@ -83,7 +83,8 @@ div.bm-burger-button {
     justify-content: flex-end;
   }
   .navlink-desktop,
-  .navlink-desktop:link {
+  .navlink-desktop:link,
+  .navlink-desktop:hover {
     font-family: 'Yanone Kaffeesatz';
     font-size: 28px;
     padding-right: 10px;

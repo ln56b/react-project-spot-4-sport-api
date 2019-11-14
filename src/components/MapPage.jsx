@@ -3,6 +3,7 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import MapTest from './MapTest';
 import ApiKey from './Key';
+import Footer from './Footer';
 
 class MapPage extends React.Component {
   constructor(props) {
@@ -90,6 +91,7 @@ class MapPage extends React.Component {
           geometryInput={finalConst}
           sportId={this.props.match.params.sportId}
         />
+        <Footer />
       </div>
     );
   }
