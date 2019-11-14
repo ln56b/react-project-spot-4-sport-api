@@ -87,15 +87,7 @@ class SportsProvider extends React.Component {
     }
     const gettingScroll = letterArr.map(letter => {
       return (
-        <Link
-          activeClass="active"
-          to={letter}
-          spy
-          smooth
-          offset={-70}
-          duration={500}
-          style={{ fontSize: '16px' }}
-        >
+        <Link activeClass="active" to={letter} spy smooth offset={-70} duration={500}>
           {letter}
         </Link>
       );

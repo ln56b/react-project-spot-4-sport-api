@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar className="fixed-navbar" />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/map/:sportId/:city" component={MapPage} />
