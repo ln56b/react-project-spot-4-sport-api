@@ -9,6 +9,7 @@ h4 {
 }
 .sportsProvider-container {
   display: flex;
+  min-height: 100vh;
 }
 .link-alphabet {
   display: flex;
