@@ -8,12 +8,12 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
 }
 
 .map-container {
-  height: 77.4vh;
+  height: 73vh;
 }
 
 .map {
   display: flex;
-  height: 600px;
+  height: 98%;
   width: 90%;
   border-radius: 15px;
   display: flex;
@@ -27,15 +27,17 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
   border: #c84c4b;
 }
 
-@media only screen and (min-width: 767px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) {
+  .map-container {
+    height: 77vh;
+  }
   .map {
     display: flex;
-    height: 350px;
     width: 90%;
+    height: 95%;
     border-radius: 15px;
     display: flex;
     align-content: center;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
   }
 }
