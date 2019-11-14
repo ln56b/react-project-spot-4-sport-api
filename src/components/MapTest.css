@@ -8,12 +8,12 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
 }
 
 .map-container {
-  height: 73vh;
+  height: 69vh;
 }
 
 .map {
   display: flex;
-  height: 98%;
+  height: 100%;
   width: 90%;
   border-radius: 15px;
   display: flex;
