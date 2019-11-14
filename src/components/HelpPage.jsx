@@ -1,5 +1,7 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import './Help.css';
+import { NavLink } from 'react-router-dom';
 
 function HelpPage() {
   return (
@@ -42,6 +44,9 @@ function HelpPage() {
           You can access directly your spot's website (if they have one) by clicking its address!
         </p>
       </div>
+      <Button outline color="danger">
+        <NavLink to="/contactus">Or contact us directly...</NavLink>
+      </Button>
     </div>
   );
 }

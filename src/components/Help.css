@@ -14,6 +14,8 @@
 .help-container {
   background-color: #e5e5e5;
   padding: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .question {
@@ -22,7 +24,7 @@
   color: #c84c4b;
   font-size: 20px;
   margin-bottom: 8px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .answer {
@@ -32,10 +34,21 @@
 }
 
 .question-answer {
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .letter-question {
   font-size: 25px;
+}
+
+a {
+  color: #c84c4b;
+}
+
+@media only screen and (min-width: 768px) {
+  .help-container {
+    background-color: white;
+    border-radius: 5px;
+  }
 }
