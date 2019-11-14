@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
 .navLogo {
   height: 50px;
   width: 50px;
@@ -46,15 +47,55 @@ div.bm-burger-button {
   top: 15px;
   left: 15px;
 }
+.navbar-desktop {
+  display: none;
+}
+.desktop-line {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   .navLogo {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 8px;
   }
   .logoLink {
-    font-size: 1em;
+    font-size: 1.1em;
+    margin-left: 25px;
   }
   .navFour {
     font-size: 50px;
+  }
+  img.navLogo {
+    margin-left: 15px;
+  }
+  .navContainer {
+    margin-top: 20px;
+    position: static;
+    flex-direction: row-reverse;
+  }
+  .burger {
+    display: none;
+  }
+  .navbar-desktop {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  .navlink-desktop,
+  .navlink-desktop:link {
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 28px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .navlink-desktop.active {
+    color: #c84c4b;
+  }
+  .desktop-line {
+    display: block;
+    margin: 0;
+    border-top: 2px solid #c84c4b;
   }
 }
