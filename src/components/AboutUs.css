@@ -44,7 +44,9 @@
 }
 
 .js-paragraph,
-.react-paragraph {
+.react-paragraph,
+.git-paragraph,
+.github-paragraph {
   display: flex;
   flex-direction: column;
   margin: 0 5%;
