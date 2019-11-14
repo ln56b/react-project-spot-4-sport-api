@@ -20,12 +20,13 @@ button {
 .link-alphabet {
   display: flex;
   flex-direction: column;
+  top: 60px;
   right: 10px;
-  bottom: 15px;
+  bottom: 60px;
   position: fixed;
 }
 div.link-alphabet a {
-  font-size: 16px;
+  font-size: 17px;
 }
 .list-sports {
   align-self: flex-start;
@@ -63,13 +64,14 @@ div.link-alphabet a {
   }
   .link-alphabet {
     flex-direction: row;
-    top: 100px;
+    top: 90px;
     bottom: 1050px;
-    margin-right: 1em;
+    position: fixed;
+    margin: 0;
   }
   div.link-alphabet a {
     font-size: 28px;
-    padding: 1px;
+    padding: 1.5px;
   }
   .list-sports {
     margin-left: 40px;
@@ -77,7 +79,7 @@ div.link-alphabet a {
   button {
     position: fixed;
     visibility: visible;
-    bottom: 130px;
+    bottom: 70px;
     right: 25px;
     width: 150px;
     height: 70px;
@@ -92,5 +94,17 @@ div.link-alphabet a {
   button a:visited {
     text-decoration: none;
     color: white;
+  }
+  .sportlist-css-mapsearchbar {
+    margin-left: 100px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .link-alphabet {
+    margin-right: 2em;
+  }
+  div.link-alphabet a {
+    font-size: 28px;
+    padding: 3px;
   }
 }

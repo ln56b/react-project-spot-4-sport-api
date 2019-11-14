@@ -2,3 +2,11 @@ li {
   list-style-type: none;
   padding: 1em 1em 0.5em 4em;
 }
+@media screen and (min-width: 768px) {
+  .sportlist-css-mapsearchbar {
+    position: relative;
+    left: 200px;
+    height: 80px;
+    /* top: -65px; */
+  }
+}

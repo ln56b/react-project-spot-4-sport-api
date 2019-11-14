@@ -18,7 +18,7 @@ function SportsListFormatted(props) {
           </li>
         </div>
         {selectedSport === sport.sportId && (
-          <div>
+          <div className="sportlist-css-mapsearchbar">
             <SearchBar
               id={sport.sportId}
               handleSearch={e => setCity(e.target.value)}
