@@ -1,6 +1,12 @@
+.tech-logos {
+  width: 125px;
+  height: auto;
+}
+
 .about-us-container {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .about-us-container h2 {
@@ -22,10 +28,24 @@
 }
 
 .intro-container > img {
-  max-width: 150px;
+  max-width: 100px;
   align-self: center;
 }
 
 .wcs-description {
   margin: 0 4%;
+}
+
+.techno-first-line,
+.techno-second-line {
+  display: flex;
+  margin: 2% 0;
+  justify-content: center;
+}
+
+.js-paragraph,
+.react-paragraph {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
 }

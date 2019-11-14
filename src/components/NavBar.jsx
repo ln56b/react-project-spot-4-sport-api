@@ -21,7 +21,7 @@ function NavBar() {
           <NavLink to="/map" className="navlink-desktop">
             SPOT
           </NavLink>
-          <NavLink to="/about" className="navlink-desktop">
+          <NavLink to="/aboutus" className="navlink-desktop">
             ABOUT
           </NavLink>
           <NavLink to="/help" className="navlink-desktop">
