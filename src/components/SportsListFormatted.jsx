@@ -13,7 +13,7 @@ function SportsListFormatted(props) {
     return (
       <>
         <div onClick={() => setSelectedSport(sport.sportId)} role="presentation">
-          <li name={sport.sportName} key={notAnIndex}>
+          <li className="sportList-font-size" name={sport.sportName} key={notAnIndex}>
             {sport.sportName}
           </li>
         </div>

@@ -3,7 +3,7 @@ h4 {
   margin: 0 3em;
   margin-top: 1em;
 }
-button {
+.anchorLink {
   visibility: hidden;
 }
 ​.hr {
@@ -76,30 +76,37 @@ div.link-alphabet a {
   .list-sports {
     margin-left: 40px;
   }
-  button {
+  .anchorLink {
     position: fixed;
     visibility: visible;
     bottom: 70px;
     right: 25px;
-    width: 150px;
+    width: 200px;
     height: 70px;
   }
-  button a {
-    color: white;
-    font-size: 40px;
+  .anchorLink a {
+    color: black;
+    font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+    font-style: bold;
+    font-size: 44px;
   }
-  button a:link,
-  button a:hover,
-  button a:active,
-  button a:visited {
+  .anchorLink a:link,
+  .anchorLink a:hover,
+  .anchorLink a:active,
+  .anchorLink a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
+  }
+  .anchorFour {
+    font-size: 50px;
+    color: #c84c4b;
+    font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
   }
   .sportlist-css-mapsearchbar {
     margin-left: 100px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .link-alphabet {
     margin-right: 2em;
   }

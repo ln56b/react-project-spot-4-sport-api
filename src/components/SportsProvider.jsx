@@ -105,8 +105,12 @@ class SportsProvider extends React.Component {
         <div className="sportsProvider-container">
           <div className="list-sports">
             <this.sportsSorted />
-            <Button color="danger" type="button">
-              <a href="#anchor-sport">&#8613;</a>
+            <Button className="anchorLink" color="link" type="button">
+              <a href="#anchor-sport">
+                SPOT
+                <span className="anchorFour">4</span>
+                SPORT
+              </a>
             </Button>
           </div>
           <div className="link-alphabet">
