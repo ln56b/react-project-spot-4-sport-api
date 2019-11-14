@@ -42,3 +42,31 @@
 .homePageLinks:hover {
   text-decoration: none;
 }
+
+@media only screen and (min-width: 768px) {
+  .homePageBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homePageDivMap {
+    margin: 20vh 10vh;
+    border-radius: 5px;
+  }
+
+  .homePageDivSport {
+    margin: 20vh 10vh;
+    border-radius: 5px;
+  }
+
+  .backgroundImage {
+    background-image: url('./images/backgroundImageDesktop.jpg');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
