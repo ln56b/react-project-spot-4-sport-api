@@ -29,7 +29,7 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
 
 @media only screen and (min-width: 768px) {
   .map-container {
-    height: 77vh;
+    height: 78vh;
   }
   .map {
     display: flex;
