@@ -12,6 +12,7 @@
     "react-alphabet-list": "^0.1.8",
     "react-alphabet-sorter": "^1.0.2",
     "react-bootstrap": "^1.0.0-beta.14",
+    "react-burger-menu": "^2.6.12",
     "react-dom": "^16.10.2",
     "react-leaflet": "^2.5.0",
     "react-leaflet-search": "^0.6.0",
@@ -19,6 +20,7 @@
     "react-native-alphabetlistview": "^0.3.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14",
     "reactstrap": "^8.1.1",
     "string-natural-compare": "^3.0.0"
   },
