@@ -79,10 +79,12 @@ div.link-alphabet a {
     visibility: visible;
     bottom: 130px;
     right: 25px;
+    width: 150px;
+    height: 70px;
   }
   button a {
     color: white;
-    font-size: 80px;
+    font-size: 40px;
   }
   button a:link,
   button a:hover,
