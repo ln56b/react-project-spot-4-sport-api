@@ -7,7 +7,7 @@ import Sources from './Sources';
 function Footer() {
   return (
     <div className="footer-container">
-      <Sources />
+      <p className="sourcesDiv">Sources</p>
       <span>© Wild Code School, 2019.</span>
       <div className="logo-container">
         <img id="twitter-logo" src={logoTwitter} alt="twitter logo" />

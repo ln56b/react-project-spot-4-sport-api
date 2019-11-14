@@ -1,6 +1,10 @@
 import React from 'react';
 import './Sources.css';
 
-const Sources = () => <p className="sourcesDiv">Sources</p>;
+const Sources = () => (
+  <div>
+    <a className="sourcesDiv">Sources</a>
+  </div>
+);
 
 export default Sources;
