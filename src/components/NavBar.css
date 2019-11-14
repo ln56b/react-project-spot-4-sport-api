@@ -70,7 +70,7 @@ div.bm-burger-button {
     margin-left: 15px;
   }
   .navContainer {
-    margin-top: 20px;
+    margin-top: 10px;
     position: static;
     flex-direction: row-reverse;
   }

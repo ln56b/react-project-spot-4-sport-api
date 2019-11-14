@@ -8,6 +8,7 @@
   align-items: center;
   padding-bottom: 8px;
   padding-top: 8px;
+  margin-top: 60px;
 }
 
 .intro {
@@ -73,13 +74,14 @@ textarea.text-area.form-control {
   width: 100%;
 }
 
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 768px) {
   .form-container {
     /* background-color: #e5e5e5; */
     background-image: url('./images/FondSansDegradé.png');
-    height: 1000px;
+    height: 700px;
     display: flex;
     justify-content: center;
+    margin-top: 0;
   }
   div.form-sous-container {
     background-color: white;

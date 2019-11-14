@@ -64,7 +64,7 @@ function ContactPage() {
         <Button
           outline
           color="danger"
-          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=guillaume.trouche.6@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=spot4sport.wcs@gmail.com"
           target="_blank"
         >
           Submit
