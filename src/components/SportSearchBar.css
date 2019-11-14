@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* position: absolute; */
 }
 
 .sportSearchBarInput {
@@ -13,6 +12,12 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .sportSearchBarDiv {
+    position: absolute;
+    padding-left: 5em;
+    background: white;
+  }
+
   .sportSearchBarInput {
     width: 300px;
   }
