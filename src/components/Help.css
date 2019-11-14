@@ -16,6 +16,8 @@
   padding: 8px;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
+  height: 90vh;
 }
 
 .question {
@@ -55,6 +57,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 10px 10px 10px;
 }
 
 button.btn.btn-outline-danger {
@@ -66,8 +69,9 @@ button.btn.btn-outline-danger {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 100vh;
     background-image: url('./images/FondSansDegradé.png');
+    margin-top: 0px;
   }
   .help-sous-container {
     background-color: white;
@@ -75,6 +79,6 @@ button.btn.btn-outline-danger {
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 6px;
+    padding: 10px;
   }
 }
