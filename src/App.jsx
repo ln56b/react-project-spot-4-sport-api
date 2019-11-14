@@ -6,6 +6,8 @@ import SportsPage from './components/SportsPage';
 import MapPage from './components/MapPage';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
+import Contact from './components/Contact';
+import HelpPage from './components/HelpPage';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/map/:sportId/:city" component={MapPage} />
         <Route path="/map" component={MapPage} />
         <Route path="/sports" component={SportsPage} />
+        <Route path="/contactus" component={Contact} />
+        <Route path="/help" component={HelpPage} />
       </Switch>
     </div>
   );
