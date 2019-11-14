@@ -1,5 +1,10 @@
+.map-page-container {
+  margin-top: 65px;
+}
+
 @media only screen and (min-width: 768px) {
   .map-page-container {
+    margin-top: 0;
     background-color: #e5e5e5;
     background-image: url('./images/FondSansDegradé.png');
     height: 100%;
