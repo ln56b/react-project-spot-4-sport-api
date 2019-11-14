@@ -28,8 +28,9 @@
   margin: 1vh;
 }
 
-.sourcesDiv {
-  display: none;
+a:link {
+  color: #c84c4b;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -66,8 +67,13 @@
 
   .sourcesDiv {
     display: inline;
-    color: black;
     margin-top: 0;
     margin-bottom: 0;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: #c84c4b;
   }
 }

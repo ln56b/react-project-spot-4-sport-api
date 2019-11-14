@@ -2,12 +2,11 @@ import React from 'react';
 import './Footer.css';
 import logoTwitter from './images/logoTwitter.png';
 import logoFacebook from './images/logoFacebook.png';
-import Sources from './Sources';
 
 function Footer() {
   return (
     <div className="footer-container">
-      <a href="https://www.flaticon.com/" className="sourcesDiv">
+      <a href="https://www.flaticon.com/" c target="_blank" lassName="sourcesDiv">
         Sources
       </a>
       <span>© Wild Code School, 2019.</span>
