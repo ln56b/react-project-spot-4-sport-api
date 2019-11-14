@@ -5,11 +5,8 @@ import SportsPage from './components/SportsPage';
 import MapPage from './components/MapPage';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
-<<<<<<< HEAD
 import AboutUs from './components/AboutUs';
-=======
 import Footer from './components/Footer';
->>>>>>> dev
 
 function App() {
   return (

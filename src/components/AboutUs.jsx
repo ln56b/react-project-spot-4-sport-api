@@ -11,15 +11,15 @@ function AboutUs() {
   return (
     <div className="about-us-container">
       <div className="about-us-text">
-        <h2>About Us</h2>
+        <h2>Wild Code School</h2>
         <div className="intro-container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+          <p className="wcs-description">
+            As developers following a 5-months course, we needed to develop a web application for
+            our second project. We needed to use an API that listed sports so that we coud create a
+            localization app.
+            <p>
+              <b>Thus, Spot4Sport was created.</b>
+            </p>
           </p>
           <img src={WCSLogo} alt="wild code school logo" />
         </div>

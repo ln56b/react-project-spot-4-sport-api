@@ -3,9 +3,18 @@
   flex-direction: column;
 }
 
+.about-us-container h2 {
+  color: #c84c4b;
+}
+
+.about-us-container p {
+  text-align: justify;
+}
+
 .about-us-text {
   display: flex;
   flex-direction: column;
+  margin: 0 2%;
 }
 
 .intro-container {
@@ -14,5 +23,9 @@
 
 .intro-container > img {
   max-width: 150px;
-  height: ;
+  align-self: center;
+}
+
+.wcs-description {
+  margin: 0 4%;
 }
