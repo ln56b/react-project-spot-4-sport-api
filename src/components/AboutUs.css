@@ -1,26 +1,30 @@
-.tech-logos {
-  width: 125px;
-  height: auto;
-}
-
 .about-us-container {
+  background-color: #e5e5e5;
   display: flex;
   flex-direction: column;
   margin-top: 60px;
 }
 
+.about-us-container h1 {
+  align-self: center;
+  margin: 5% 0;
+}
+
 .about-us-container h2 {
   color: #c84c4b;
+  margin-left: 2%;
 }
 
 .about-us-container p {
   text-align: justify;
 }
 
-.about-us-text {
+.about-us-wcs,
+.about-us-techno,
+.about-us-links {
   display: flex;
   flex-direction: column;
-  margin: 0 2%;
+  margin: 5% 2%;
 }
 
 .intro-container {
@@ -28,12 +32,17 @@
 }
 
 .intro-container > img {
-  max-width: 100px;
+  max-width: 125px;
   align-self: center;
 }
 
 .wcs-description {
   margin: 0 4%;
+}
+
+.tech-logos {
+  width: 125px;
+  height: auto;
 }
 
 .techno-first-line,
@@ -43,11 +52,85 @@
   justify-content: center;
 }
 
-.js-paragraph,
-.react-paragraph,
-.git-paragraph,
-.github-paragraph {
+.techno-first-line p,
+.techno-second-line p {
+  text-align: center;
+}
+
+.tech-paragraph {
   display: flex;
   flex-direction: column;
   margin: 0 5%;
+}
+
+.profile-description {
+  display: flex;
+  margin: 5% 0 5% 5%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: auto;
+}
+
+.profile-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8%;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-container {
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .about-us-wcs {
+    padding: 20px;
+    width: 40%;
+  }
+
+  .about-us-links {
+    padding: 20px;
+  }
+
+  .about-us-wcs,
+  .about-us-techno,
+  .about-us-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 3%;
+  }
+
+  .intro-container,
+  .profile-description {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .about-us-techno {
+    order: 1;
+    width: 100%;
+  }
+
+  .tech-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .tech-paragraph {
+    margin: 0 55%;
+  }
 }

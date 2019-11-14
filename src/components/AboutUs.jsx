@@ -12,8 +12,9 @@ import CamilleProfilePic from './images/CamilleProfilePic.jpeg';
 function AboutUs() {
   return (
     <div>
+      <h1>About Us</h1>
       <div className="about-us-container">
-        <div className="about-us-text">
+        <div className="about-us-wcs">
           <h2>Wild Code School</h2>
           <div className="intro-container">
             <p className="wcs-description">
@@ -27,43 +28,59 @@ function AboutUs() {
             <img src={WCSLogo} alt="wild code school logo" />
           </div>
         </div>
-        <div className="about-us-technologies">
+        <div className="about-us-techno">
           <h2>Technologies used</h2>
-          <div className="techno-first-line">
-            <div className="js-paragraph">
-              <img className="tech-logos" src={JSLogo} alt="javascript logo" />
-              <p>JavaScript</p>
+          <div className="tech-container">
+            <div className="techno-first-line">
+              <div className="tech-paragraph">
+                <img className="tech-logos" src={JSLogo} alt="javascript logo" />
+                <p>JavaScript</p>
+              </div>
+              <div className="tech-paragraph">
+                <img className="tech-logos" src={ReactLogo} alt="react logo" />
+                <p>React JS</p>
+              </div>
             </div>
-            <div className="react-paragraph">
-              <img className="tech-logos" src={ReactLogo} alt="react logo" />
-              <p>React JS</p>
-            </div>
-          </div>
-          <div className="techno-second-line">
-            <div className="git-paragraph">
-              <img className="tech-logos" src={GitLogo} alt="git logo" />
-              <p>Git</p>
-            </div>
-            <div className="github-paragraph">
-              <img className="tech-logos" src={GitHubLogo} alt="github logo" />
-              <p>GitHub</p>
+            <div className="techno-second-line">
+              <div className="tech-paragraph">
+                <img className="tech-logos" src={GitLogo} alt="git logo" />
+                <p>Git</p>
+              </div>
+              <div className="tech-paragraph">
+                <img className="tech-logos" src={GitHubLogo} alt="github logo" />
+                <p>GitHub</p>
+              </div>
             </div>
           </div>
         </div>
         <div className="about-us-links">
           <h2>More information</h2>
-          <img src={HeleneProfilePic} alt="Helene profile pic" />
-          <p>LinkedIn</p>
-          <p>GitHub</p>
-          <img src={CamilleProfilePic} alt="Camille profile pic" />
-          <p>LinkedIn</p>
-          <p>GitHub</p>
-          {/* <img src={} alt="Virginie profile pic" />
-        <p>LinkedIn</p>
-        <p>GitHub</p>
-        <img src={} alt="Guillaume profile pic" />
-        <p>LinkedIn</p>
-        <p>GitHub</p> */}
+          <div>
+            <div className="profile-description">
+              <img className="profile-pic" src={HeleneProfilePic} alt="Helene profile pic" />
+              <div className="profile-links">
+                <p>
+                  <b>Hélène Baudrand</b>
+                </p>
+                <span>
+                  <a href="">LinkedIn</a>
+                </span>
+                <span>GitHub</span>
+              </div>
+            </div>
+            <div className="profile-description">
+              <img className="profile-pic" src={CamilleProfilePic} alt="Camille profile pic" />
+              <div className="profile-links">
+                <p>
+                  <b>Camille Coin</b>
+                </p>
+                <span>
+                  <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
+                </span>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer2 />
