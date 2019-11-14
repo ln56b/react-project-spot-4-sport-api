@@ -7,7 +7,9 @@ import Sources from './Sources';
 function Footer() {
   return (
     <div className="footer-container">
-      <p className="sourcesDiv">Sources</p>
+      <a href="https://www.flaticon.com/" className="sourcesDiv">
+        Sources
+      </a>
       <span>© Wild Code School, 2019.</span>
       <div className="logo-container">
         <img id="twitter-logo" src={logoTwitter} alt="twitter logo" />
