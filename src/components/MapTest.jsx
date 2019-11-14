@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
 import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
-import MapCheckbox from './MapCheckbox';
 
 const myIcon = L.icon({
   iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
@@ -92,7 +91,6 @@ class MapTest extends React.Component {
           {this.state.dataMarkers && (
             <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
-          <MapCheckbox />
         </Map>
       </div>
     );
