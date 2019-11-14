@@ -1,11 +1,17 @@
 h4 {
   color: #c84c4b;
   margin: 0 3em;
-  padding: 0.5em;
+  margin-top: 1em;
+}
+button {
+  visibility: hidden;
 }
 ​.hr {
   border: 1px solid #c84c4b;
   margin: 0 3em;
+}
+.sport-fullpage-container {
+  margin-top: 60px;
 }
 .sportsProvider-container {
   display: flex;
@@ -15,7 +21,7 @@ h4 {
   display: flex;
   flex-direction: column;
   right: 10px;
-  bottom: 20px;
+  bottom: 15px;
   position: fixed;
 }
 div.link-alphabet a {
@@ -25,19 +31,64 @@ div.link-alphabet a {
   align-self: flex-start;
 }
 
+@media screen and (max-height: 700px) {
+  div.link-alphabet a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-height: 600px) {
+  div.link-alphabet a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-height: 570px) {
+  div.link-alphabet a {
+    font-size: 12px;
+  }
+}
 @media screen and (min-width: 768px) {
+  .sport-fullpage-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
   .sportsProvider-container {
-    justify-content: space-between;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .desktop-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .link-alphabet {
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    position: static;
-    font-size: 20px;
+    top: 100px;
+    bottom: 1050px;
+    margin-right: 1em;
   }
   div.link-alphabet a {
-    font-size: 20px;
+    font-size: 28px;
     padding: 1px;
+  }
+  .list-sports {
+    margin-left: 40px;
+  }
+  button {
+    position: fixed;
+    visibility: visible;
+    bottom: 130px;
+    right: 25px;
+  }
+  button a {
+    color: white;
+    font-size: 80px;
+  }
+  button a:link,
+  button a:hover,
+  button a:active,
+  button a:visited {
+    text-decoration: none;
+    color: white;
   }
 }
