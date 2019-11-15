@@ -46,6 +46,7 @@
 
 @media only screen and (min-width: 768px) {
   .homePageBody {
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,12 +55,12 @@
   }
 
   .homePageDivMap {
-    margin: 20vh 10vh;
+    margin: 21vh 10vh;
     border-radius: 5px;
   }
 
   .homePageDivSport {
-    margin: 20vh 10vh;
+    margin: 21vh 10vh;
     border-radius: 5px;
   }
 
