@@ -97,7 +97,7 @@ class SportsProvider extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sport-fullpage-container">
         <div className="sportsSearchBar-container">
           <SportsSearchBar results={this.state.sports} />
         </div>

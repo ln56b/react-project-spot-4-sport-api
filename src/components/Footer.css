@@ -28,13 +28,16 @@
   margin: 1vh;
 }
 
+.footer-container a {
+  color: #c84c4b;
+}
+
 @media only screen and (min-width: 768px) {
   .footer-container {
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0;
     padding-bottom: 0;
     margin-bottom: 20px;
     height: 4vh;
@@ -58,5 +61,18 @@
     width: 35%;
     height: auto;
     margin: 1%;
+  }
+
+  .sourcesDiv {
+    display: inline;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer-container a {
+    color: black;
+  }
+  .footer-container a:hover {
+    color: #c84c4b;
+    text-decoration: none;
   }
 }
