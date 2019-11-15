@@ -49,7 +49,7 @@ function ContactPage() {
                   type="password"
                   name="password"
                   className="text-area"
-                  placeholder="Phone Number"
+                  placeholder="+33712345678"
                 />
               </FormGroup>
             </div>

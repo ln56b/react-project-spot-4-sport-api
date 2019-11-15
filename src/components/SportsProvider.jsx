@@ -74,7 +74,9 @@ class SportsProvider extends React.Component {
     );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <div className="desktop-list">
-        <h4 name={letter}>{letter}</h4>
+        <h4 className="sport-alphabet-letters" name={letter}>
+          {letter}
+        </h4>
         <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
       </div>
     ));

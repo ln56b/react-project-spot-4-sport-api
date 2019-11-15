@@ -91,6 +91,10 @@
   margin: 8%;
 }
 
+.profile-links a:hover {
+  color: black;
+}
+
 @media only screen and (min-width: 768px) {
   .about-us-page {
     background-color: transparent;
@@ -103,7 +107,7 @@
     margin-top: 0;
   }
 
-  h1 {
+  .about-us-page h1 {
     display: none;
   }
 

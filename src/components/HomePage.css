@@ -13,11 +13,12 @@
   justify-content: center;
   flex-direction: column;
   background: #c84c4b;
-  height: 41vh;
+  height: 43vh;
 }
 
 .homePageDivMap h4 {
   color: white;
+  font-size: 30px;
 }
 
 .homePageDivSport {
@@ -26,11 +27,12 @@
   justify-content: center;
   flex-direction: column;
   background: white;
-  min-height: 41vh;
+  min-height: 43vh;
 }
 
 .homePageDivSport h4 {
   color: #c84c4b;
+  font-size: 30px;
 }
 
 .homePageIcon {

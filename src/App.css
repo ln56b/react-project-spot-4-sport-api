@@ -1,11 +1,11 @@
 body {
   height: 100px !important;
+  background-color: #e5e5e5;
 }
 
 @media only screen and (min-width: 768px) {
   body {
     background-image: url('./components/images/FondSansDegradé.png');
     background-attachment: fixed;
-    background-color: #e5e5e5;
   }
 }

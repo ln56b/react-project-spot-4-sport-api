@@ -6,7 +6,7 @@ import JSLogo from './images/jsLogo.png';
 import ReactLogo from './images/reactLogo.png';
 import GitLogo from './images/gitLogo.png';
 import GitHubLogo from './images/githubLogo.png';
-import HeleneProfilePic from './images/HeleneProfilePic.png';
+import HeleneProfilePic from './images/HeleneProfilePic.jpeg';
 import CamilleProfilePic from './images/CamilleProfilePic.jpeg';
 import ViProfilePic from './images/ViProfilePic.png';
 import GuiProfilePic from './images/GuiProfilePic.png';
