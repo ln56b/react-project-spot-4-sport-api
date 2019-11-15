@@ -6,7 +6,7 @@ import logoFacebook from './images/logoFacebook.png';
 function Footer() {
   return (
     <div className="footer-container">
-      <a href="https://www.flaticon.com/" c target="_blank" lassName="sourcesDiv">
+      <a href="https://www.flaticon.com/" target="_blank" className="sourcesDiv">
         Sources
       </a>
       <span>© Wild Code School, 2019.</span>

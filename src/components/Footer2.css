@@ -27,7 +27,7 @@
   margin: 1vh;
 }
 
-a {
+.footer-container2 a {
   color: #c84c4b;
 }
 
@@ -66,10 +66,10 @@ a {
     margin-top: 0;
     margin-bottom: 0;
   }
-  a {
+  .footer-container2 a {
     color: black;
   }
-  a:hover {
+  .footer-container2 a:hover {
     color: #c84c4b;
     text-decoration: none;
   }
