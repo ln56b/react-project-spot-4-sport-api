@@ -47,6 +47,7 @@ div.link-alphabet a {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .sport-fullpage-container {
     margin-top: 20px;
