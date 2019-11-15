@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-scroll';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
+import { Button } from 'reactstrap';
 import SportsSearchBar from './SportsSearchBar';
 
 class SportsProvider extends React.Component {
@@ -72,7 +73,7 @@ class SportsProvider extends React.Component {
       letter.match(filterOutNumber)
     );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
-      <div>
+      <div className="desktop-list">
         <h4 name={letter}>{letter}</h4>
         <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
       </div>
@@ -104,6 +105,13 @@ class SportsProvider extends React.Component {
         <div className="sportsProvider-container">
           <div className="list-sports">
             <this.sportsSorted />
+            <Button className="anchorLink" color="link" type="button">
+              <a href="#anchor-sport">
+                SPOT
+                <span className="anchorFour">4</span>
+                SPORT
+              </a>
+            </Button>
           </div>
           <div className="link-alphabet">
             <this.scrolledList />
