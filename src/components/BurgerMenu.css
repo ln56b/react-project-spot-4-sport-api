@@ -67,6 +67,7 @@ div.bm-menu-wrap {
 
 div.bm-overlay {
   height: 150vh !important;
+  margin-top: -10% !important;
 }
 
 .bm-overlay {
