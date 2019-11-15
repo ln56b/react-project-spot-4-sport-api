@@ -7,7 +7,7 @@ import logo from './images/logomap.png';
 function NavBar() {
   return (
     <div>
-      <div className="navContainer">
+      <div id="anchor-sport" className="navContainer">
         <div className="burger">
           <BurgerMenu />
         </div>
