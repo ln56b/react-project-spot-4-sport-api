@@ -63,10 +63,10 @@ function AboutUs() {
                 <img className="profile-pic" src={HeleneProfilePic} alt="Helene profile pic" />
                 <div className="profile-links">
                   <p>
-                    <b>Hélène Baudrand</b>
+                    <b>Hélène</b>
                   </p>
                   <span>
-                    <a href="">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/hbaudrand-3487233/">LinkedIn</a>
                   </span>
                   <span>
                     <a href="https://github.com/ln56b">Github</a>
@@ -77,7 +77,7 @@ function AboutUs() {
                 <img className="profile-pic" src={CamilleProfilePic} alt="Camille profile pic" />
                 <div className="profile-links">
                   <p>
-                    <b>Camille Coin</b>
+                    <b>Camille</b>
                   </p>
                   <span>
                     <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
@@ -94,10 +94,12 @@ function AboutUs() {
                 <img className="profile-pic" src={ViProfilePic} alt="Camille profile pic" />
                 <div className="profile-links">
                   <p>
-                    <b>Virginie Dupré</b>
+                    <b>Virginie</b>
                   </p>
                   <span>
-                    <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/virginie-dupr%C3%A9-1789b4183/">
+                      LinkedIn
+                    </a>
                   </span>
                   <span>
                     <a href="https://github.com/TonicVi">Github</a>
@@ -108,11 +110,13 @@ function AboutUs() {
                 <img className="profile-pic" src={GuiProfilePic} alt="Camille profile pic" />
                 <div className="profile-links">
                   <p>
-                    <b>Guillaume Trouche</b>
+                    <b>Guillaume</b>
                   </p>
-                  <span>LinkedIn</span>
                   <span>
-                    <a href="">Github</a>
+                    <a href="https://www.linkedin.com/in/guillaume-trouche-96681b197/">LinkedIn</a>
+                  </span>
+                  <span>
+                    <a href="https://github.com/guigzzz31">Github</a>
                   </span>
                 </div>
               </div>

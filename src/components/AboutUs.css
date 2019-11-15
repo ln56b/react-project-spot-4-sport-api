@@ -10,7 +10,12 @@
 
 .about-us-page h1 {
   align-self: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 5% 0;
+}
+
+.about-us-page p {
+  font-size: 22px;
 }
 
 .about-us-container h2 {
@@ -33,6 +38,7 @@
 
 .intro-container {
   display: flex;
+  flex-direction: column;
 }
 
 .intro-container > img {
@@ -128,8 +134,8 @@
 
   .intro-container {
     border-radius: 10px;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
     padding-right: 3%;
   }
 
@@ -142,6 +148,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .techno-first-line {
+    display: flex;
+    justify-items: center;
   }
 
   .tech-paragraph {

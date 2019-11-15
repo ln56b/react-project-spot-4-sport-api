@@ -20,13 +20,13 @@ function ContactPage() {
                 <Label className="label-form-contact" for="firstName">
                   First Name
                 </Label>
-                <Input type="text" name="text" className="text-area" placeholder="First Name" />
+                <Input type="text" name="text" className="text-area" placeholder="Michel" />
               </FormGroup>
               <FormGroup className="formGroup-contact">
                 <Label className="label-form-contact" for="lastName">
                   Last Name
                 </Label>
-                <Input type="text" name="text" className="text-area" placeholder="Last Name" />
+                <Input type="text" name="text" className="text-area" placeholder="Tacos" />
               </FormGroup>
             </div>
             <div className="line">
@@ -34,7 +34,12 @@ function ContactPage() {
                 <Label className="label-form-contact" for="email">
                   Email
                 </Label>
-                <Input type="email" name="email" className="text-area-email" placeholder="Email" />
+                <Input
+                  type="email"
+                  name="email"
+                  className="text-area-email"
+                  placeholder="lovetacos@toto.com"
+                />
               </FormGroup>
               <FormGroup className="formGroup-contact">
                 <Label className="label-form-contact" for="examplePassword">
