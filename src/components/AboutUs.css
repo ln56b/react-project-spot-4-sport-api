@@ -1,11 +1,14 @@
-.about-us-container {
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+
+.about-us-page {
   background-color: #e5e5e5;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
 }
 
-.about-us-container h1 {
+.about-us-page h1 {
   align-self: center;
   margin: 5% 0;
 }
@@ -17,6 +20,7 @@
 
 .about-us-container p {
   text-align: justify;
+  font-family: 'BenchNine', sans-serif;
 }
 
 .about-us-wcs,
@@ -82,8 +86,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .about-us-page {
+    background-color: transparent;
+  }
+
   .about-us-container {
-    background-color: #e5e5e5;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -113,10 +120,17 @@
   }
 
   .intro-container,
-  .profile-description {
-    background-color: white;
+  .profile-first-line,
+  .profile-second-line {
     padding: 10px;
+    background-color: white;
+  }
+
+  .intro-container {
     border-radius: 10px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 3%;
   }
 
   .about-us-techno {
@@ -132,5 +146,27 @@
 
   .tech-paragraph {
     margin: 0 55%;
+  }
+
+  #techno-used {
+    color: black;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .profile-first-line {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .profile-second-line {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .profile-first-line,
+  .profile-second-line {
+    width: 25vw;
   }
 }

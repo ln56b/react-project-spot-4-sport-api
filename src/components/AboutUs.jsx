@@ -6,12 +6,14 @@ import JSLogo from './images/jsLogo.png';
 import ReactLogo from './images/reactLogo.png';
 import GitLogo from './images/gitLogo.png';
 import GitHubLogo from './images/githubLogo.png';
-import HeleneProfilePic from './images/HeleneProfilePic.gif';
+import HeleneProfilePic from './images/HeleneProfilePic.png';
 import CamilleProfilePic from './images/CamilleProfilePic.jpeg';
+import ViProfilePic from './images/ViProfilePic.png';
+import GuiProfilePic from './images/GuiProfilePic.png';
 
 function AboutUs() {
   return (
-    <div>
+    <div className="about-us-page">
       <h1>About Us</h1>
       <div className="about-us-container">
         <div className="about-us-wcs">
@@ -29,7 +31,7 @@ function AboutUs() {
           </div>
         </div>
         <div className="about-us-techno">
-          <h2>Technologies used</h2>
+          <h2 id="techno-used">Technologies used</h2>
           <div className="tech-container">
             <div className="techno-first-line">
               <div className="tech-paragraph">
@@ -55,29 +57,64 @@ function AboutUs() {
         </div>
         <div className="about-us-links">
           <h2>More information</h2>
-          <div>
-            <div className="profile-description">
-              <img className="profile-pic" src={HeleneProfilePic} alt="Helene profile pic" />
-              <div className="profile-links">
-                <p>
-                  <b>Hélène Baudrand</b>
-                </p>
-                <span>
-                  <a href="">LinkedIn</a>
-                </span>
-                <span>GitHub</span>
+          <div className="profile-container">
+            <div className="profile-first-line">
+              <div className="profile-description">
+                <img className="profile-pic" src={HeleneProfilePic} alt="Helene profile pic" />
+                <div className="profile-links">
+                  <p>
+                    <b>Hélène Baudrand</b>
+                  </p>
+                  <span>
+                    <a href="">LinkedIn</a>
+                  </span>
+                  <span>
+                    <a href="https://github.com/ln56b">Github</a>
+                  </span>
+                </div>
+              </div>
+              <div className="profile-description">
+                <img className="profile-pic" src={CamilleProfilePic} alt="Camille profile pic" />
+                <div className="profile-links">
+                  <p>
+                    <b>Camille Coin</b>
+                  </p>
+                  <span>
+                    <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
+                  </span>
+                  <span>
+                    <a href="https://github.com/akopsykokwak">Github</a>
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="profile-description">
-              <img className="profile-pic" src={CamilleProfilePic} alt="Camille profile pic" />
-              <div className="profile-links">
-                <p>
-                  <b>Camille Coin</b>
-                </p>
-                <span>
-                  <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
-                </span>
-                <span>GitHub</span>
+
+            <div className="profile-second-line">
+              <div className="profile-description">
+                <img className="profile-pic" src={ViProfilePic} alt="Camille profile pic" />
+                <div className="profile-links">
+                  <p>
+                    <b>Virginie Dupré</b>
+                  </p>
+                  <span>
+                    <a href="https://www.linkedin.com/in/camillecoin/">LinkedIn</a>
+                  </span>
+                  <span>
+                    <a href="https://github.com/TonicVi">Github</a>
+                  </span>
+                </div>
+              </div>
+              <div className="profile-description">
+                <img className="profile-pic" src={GuiProfilePic} alt="Camille profile pic" />
+                <div className="profile-links">
+                  <p>
+                    <b>Guillaume Trouche</b>
+                  </p>
+                  <span>LinkedIn</span>
+                  <span>
+                    <a href="">Github</a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
