@@ -12,7 +12,6 @@
   width: 50px;
 }
 .navContainer {
-  position: fixed;
   top: 0;
   left: 0;
   margin: auto;
@@ -24,6 +23,7 @@
   align-items: center;
   background-color: white;
   z-index: 1000;
+  position: fixed;
 }
 .logoLink {
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
@@ -97,5 +97,13 @@ div.bm-burger-button {
     display: block;
     margin: 0;
     border-top: 2px solid #c84c4b;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .navbar-desktop,
+  .navlink-desktop:link,
+  .navlink-desktop:hover {
+    font-size: 32px;
+    padding-right: 15px;
   }
 }
