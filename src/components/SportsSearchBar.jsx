@@ -15,6 +15,7 @@ class SportsSearchBar extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
+  // Get sport objects, keep sport names which define results
   getInfo() {
     axios
       .get(url)
@@ -32,7 +33,7 @@ class SportsSearchBar extends Component {
         });
       });
   }
-
+  // Update query state as user input
   handleInputChange(event) {
     this.setState({ query: event.target.value }, () => {
       if (this.state.query && this.state.query.length > 1) {
@@ -47,6 +48,7 @@ class SportsSearchBar extends Component {
 
   render() {
     return (
+      // Define query as user input and send results and query as props
       <form className="sportSearchBarDiv">
         <input
           className="sportSearchBarInput"
