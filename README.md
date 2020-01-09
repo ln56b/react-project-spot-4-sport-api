@@ -6,7 +6,7 @@ React app to display sports places based on geolocalisation
 
 **Project**
 
-- Duration: 6 weeks
+- Duration: 5 weeks
 - Team : 4
 
 **Objectives**
