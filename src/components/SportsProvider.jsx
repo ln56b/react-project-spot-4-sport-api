@@ -22,7 +22,7 @@ class SportsProvider extends React.Component {
     this.sportsSorted();
     this.scrolledList();
   }
-
+  // Get sport objects and sort them alphabetically 
   getSport() {
     axios
       .get('https://sports.api.decathlon.com/sports')
@@ -54,7 +54,8 @@ class SportsProvider extends React.Component {
         });
       });
   }
-
+  
+  // Include 
   sportsSorted() {
     const { sports } = this.state;
     const filterOutNumber = /[A-Z]/;
@@ -83,6 +84,7 @@ class SportsProvider extends React.Component {
     return mySportsListSorted;
   }
 
+  // Generate alphabet and create anchors for navigation
   scrolledList() {
     const letterArr = [];
     for (let i = 0; i < 26; i += 1) {
