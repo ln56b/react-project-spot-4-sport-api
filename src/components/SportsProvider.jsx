@@ -55,10 +55,11 @@ class SportsProvider extends React.Component {
       });
   }
   
-  // Include 
+  // Include sport names in letter container
   sportsSorted() {
     const { sports } = this.state;
     const filterOutNumber = /[A-Z]/;
+    // Create method to get key : value couples in array
     const reducer = (carry, c) => {
       const key = c.sportFirstLetter;
       if (!carry[key]) {
@@ -68,11 +69,15 @@ class SportsProvider extends React.Component {
       carry[key].push(c);
       return carry;
     };
+    // Apply reducer method to sport names array
     const allMySportsInfos = sports.reduce(reducer, {});
+    // Keep only keys which are alphabet letters
     const allMySportsInfosAlphabet = Object.keys(allMySportsInfos);
+    // Same excluding non letters
     const filteredAlphabet = allMySportsInfosAlphabet.filter(letter =>
       letter.match(filterOutNumber)
     );
+    // Map through alphabet to provide letters in h4 
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
       <div className="desktop-list">
         <h4 className="sport-alphabet-letters" name={letter}>
